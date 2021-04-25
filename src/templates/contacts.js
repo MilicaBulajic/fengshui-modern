@@ -21,9 +21,9 @@ function encode(data) {
 function setActionPath(langKey) {
   let path;
   if(langKey==='en'){
-    path = '/en/contact/thanks/';
+    path = '/en/thanks/';
   }else{
-    path = '/it/contatto/grazie/';
+    path = '/sr/hvala/';
   }
   return path;
 }
@@ -260,7 +260,7 @@ export const pageQuery = graphql`query ContactPageQuery($id: String!) {
       node {
         articles {
           en
-          it
+          sr
         }
       }
     }

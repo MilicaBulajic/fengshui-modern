@@ -4,10 +4,10 @@ templateKey: blog-post
 title: Il mio primo post con Gatsby.
 date: 2019-02-01T22:31:28.375Z
 description: Il mio primo blog con Gatsby...
-lang: it
+lang: sr
 image: /img/PersimmonHD.jpg
-path: /it/blog/2019-02-01-mio-primo-blog-post-gatsby
-slug: /it/blog/2019-02-01-mio-primo-blog-post-gatsby
+path: /sr/blog/2019-02-01-mio-primo-blog-post-gatsby
+slug: /sr/blog/2019-02-01-mio-primo-blog-post-gatsby
 tags:
   - gatsby
 ---

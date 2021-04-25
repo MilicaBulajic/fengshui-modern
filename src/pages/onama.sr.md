@@ -6,8 +6,8 @@ templateKey: about
 lang: en
 image: /img/about.jpg
 date: "05-03-2019"
-path: /en/about/
-slug: /en/about/
+path: /sr/onama/
+slug: /sr/onama/
 attachments:
   - "/img/certificate1.pdf"
   - "/img/certificate2.pdf"

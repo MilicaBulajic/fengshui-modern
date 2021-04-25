@@ -23,8 +23,8 @@ imageCardSL:
   name: John Kaki
   description: Sono un artista visivo, seguimi in questa avventura...!
   website: www.kaki.com
-path: /it/contatto
-slug: /it/contatto
+path: /sr/kontakt
+slug: /sr/kontakt
 ---
 
 In questa pagina di contatto potete inviare un messaggio e-mail.

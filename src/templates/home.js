@@ -5,13 +5,12 @@ import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import SEO from '../components/SEO/SEO'
 import Content, { HTMLContent } from "../components/Content"
-import IconMenu from '../components/IconMenu'
-import iconLinks from '../data/artworksMenu'
 import select from '../components/utils'
 import Slider from '../components/Slider'
 import Banner from '../components/Banner'
 import Testimonials from '../components/Testimonials'
 import CardSlide from '../components/CardSlide'
+
 
 const HomePageTemplate = ({
   imageCardSL,
@@ -25,10 +24,6 @@ const HomePageTemplate = ({
   title,
   content,
   contentComponent,
-  firstLink,
-  secondLink,
-  thirdLink,
-  fourthLink,
   tags,
   langKey
 }) => {
@@ -87,12 +82,6 @@ const HomePageTemplate = ({
        <Slider array={array} display={display}/>
        <Banner main={main.image1} mainpitch={mainpitch}/>
        <div className="container section">
-       <IconMenu
-       firstLink={firstLink}
-       secondLink={secondLink}
-       thirdLink={thirdLink}
-       fourthLink={fourthLink}
-       />
        </div>
        <div className="section">
           <Testimonials testimonials={testimonials} />
@@ -156,10 +145,6 @@ class HomePage extends React.Component {
             contentComponent={HTMLContent}
             title={dataMarkdown.frontmatter.title}
             content={dataMarkdown.html}
-            firstLink={iconLinks.painting[sel]}
-            secondLink={iconLinks.sculpture[sel]}
-            thirdLink={iconLinks.performance[sel]}
-            fourthLink={iconLinks.interactivity[sel]}
             tags={tags}
             langKey={langKey}
              />
@@ -190,7 +175,7 @@ export const pageQuery = graphql`query HomePageQuery($id: String!) {
       node {
         articles {
           en
-          it
+          sr
         }
       }
     }

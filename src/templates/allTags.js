@@ -167,7 +167,7 @@ export const pageQuery = graphql`
  }
  pages: allMarkdownRemark(limit: 2000,
    filter: {
-     frontmatter: { templateKey: { regex: "/artworks/" }}
+     frontmatter: { templateKey: { regex: "/services/" }}
      fields: {
        langKey: {
          eq: "en"

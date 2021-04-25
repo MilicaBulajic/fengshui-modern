@@ -6,8 +6,8 @@ templateKey: allTags
 tags:
   - gatsby
 image: /img/PersimmonHD.jpg
-lang: it
+lang: sr
 date: "02-05-2019"
-path: /it/tags/
-slug: /it/tags/
+path: /sr/tags/
+slug: /sr/tags/
 ---

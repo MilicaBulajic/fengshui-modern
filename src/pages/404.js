@@ -42,7 +42,7 @@ export const pageQuery = graphql`
      node{
        articles {
          en
-         it
+         sr
        }
      }
    }

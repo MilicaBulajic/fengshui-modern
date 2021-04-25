@@ -5,15 +5,20 @@ import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import SEO from '../components/SEO/SEO'
 import Content, { HTMLContent } from "../components/Content"
+import Slider from '../components/Slider'
+import Testimonials from '../components/Testimonials'
 import Features from '../components/Features'
-import { FaRegGem } from 'react-icons/fa';
 
-const ArtworkIntroTemplate = ({
+const ServiceTemplate = ({
   title,
   content,
   contentComponent,
   intro,
   heading,
+  description,
+  display,
+  array,
+  testimonials,
   tags,
   langKey
 }) => {
@@ -22,24 +27,29 @@ const ArtworkIntroTemplate = ({
       <div className="container content">
        <h1 className="title animated bounceInLeft">{title}</h1>
         <div className="hero">
-            <Features gridItems={intro.blurbs} />
+          <Slider array={array} display={display}/>
+            <div className="section">
+              <h2 className="has-text-weight-semibold subtitle">
+              {heading}
+              </h2>
+              <div className="container content">
+                {description}
+               </div>
+             </div>
+             <Features gridItems={intro.blurbs} />
           </div>
-          <div className="columns">
-           <div className="column is-6">
-             <h2 className="has-text-weight-semibold subtitle">
-             <FaRegGem className="menu-names" color="#D64000"/>{heading}
-             </h2>
+             <div className="container content">
+               <Testimonials testimonials={testimonials} />
+             </div>
              <section className="section">
                <PageContent className="container content" content={content} />
-                 <TagList tags={tags} langKey={langKey}/>
+                <TagList tags={tags} langKey={langKey}/>
              </section>
-           </div>
-         </div>
       </div>
     )
 }
 
-ArtworkIntroTemplate.propTypes = {
+ServiceTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heading: PropTypes.string,
   title: PropTypes.string.isRequired,
@@ -48,15 +58,19 @@ ArtworkIntroTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  array: PropTypes.array,
   tags: PropTypes.array,
   langKey: PropTypes.string
 }
 
-class ArtworksIntroPage extends React.Component {
+class ServicesPage extends React.Component {
 
 render() {
   const data = this.props.data;
   const { frontmatter } = data.markdownRemark;
+  const { display } = frontmatter.slider;
+  const { array } = frontmatter.slider;
+  const description = frontmatter.headingDesc;
   const jsonData = data.allArticlesJson.edges[0].node.articles;
   const image = frontmatter.image.childImageSharp.gatsbyImageData.src;
   const langKey = frontmatter.lang;
@@ -68,12 +82,16 @@ render() {
           postImage={image}
         />
         <div>
-            <ArtworkIntroTemplate
+            <ServiceTemplate
             contentComponent={HTMLContent}
             heading={frontmatter.heading}
             title={frontmatter.title}
             content={data.markdownRemark.html}
             intro={frontmatter.intro}
+            display={display}
+            array={array}
+            description={description}
+            testimonials={frontmatter.testimonials}
             tags={tags}
             langKey={langKey}
             />
@@ -83,7 +101,7 @@ render() {
   }
 }
 
-ArtworksIntroPage.propTypes = {
+ServicesPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -91,9 +109,9 @@ ArtworksIntroPage.propTypes = {
   }),
 }
 
-export default ArtworksIntroPage
+export default ServicesPage
 
-export const pageQuery = graphql`query ArtworksIntroQuery($id: String!) {
+export const pageQuery = graphql`query ServicesQuery($id: String!) {
   site {
     siteMetadata {
       languages {
@@ -107,7 +125,7 @@ export const pageQuery = graphql`query ArtworksIntroQuery($id: String!) {
       node {
         articles {
           en
-          it
+          sr
         }
       }
     }
@@ -117,6 +135,7 @@ export const pageQuery = graphql`query ArtworksIntroQuery($id: String!) {
     frontmatter {
       id
       title
+      description
       tags
       lang
       image {
@@ -125,7 +144,12 @@ export const pageQuery = graphql`query ArtworksIntroQuery($id: String!) {
         }
       }
       heading
+      headingDesc
       description
+      testimonials {
+        author
+        quote
+      }
       intro {
         blurbs {
           image {
@@ -136,6 +160,16 @@ export const pageQuery = graphql`query ArtworksIntroQuery($id: String!) {
           heading
           link
           text
+        }
+      }
+      slider {
+        display
+        array {
+          original
+          thumbnail
+          originalAlt
+          originalTitle
+          description
         }
       }
     }

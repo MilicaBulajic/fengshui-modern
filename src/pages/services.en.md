@@ -1,54 +1,55 @@
 ---
 id: '05'
-title: "Pagina principale opere italiano"
+title: "Artworks start page english"
 image: /img/Persimmon.jpg
-heading: La bellezza del caco
+heading: The beauty of Persimmon
 headingDesc: >
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-description: "La pagina principale delle opere"
-templateKey: artworks
+description: "The root of the artwork page"
+templateKey: services
 tags:
   - art
-lang: it
+lang: en
 date: "05-03-2019"
-path: /it/opere/
-slug: /it/opere/
+path: /en/services/
+slug: /en/services/
 intro:
   blurbs:
     - image: /img/Persimmon.jpg
-      heading: Pittura
-      link: /it/opere/pittura/
+      heading: Painting
+      link: /en/services/
       text: >
-        In queste pagine potete trovare alcune interessante riflessioni sul caco.
+        In these pages you can find some interesting reflections on the persimmon.
     - image: /img/Kaki.jpg
-      heading: Scultura
-      link: /it/opere/scultura/
+      heading: Sculpture
+      link: /en/services/
       text: >
-        Molti artisti hanno ritratto l'albero del caco, scopri quanti ne sono rimasti affascinati.
+        Many artists have portrayed the persimmon tree, discover how many they have been fascinated by.
     - image: /img/Caco.jpg
       heading: Performance
-      link: /it/opere/performance/
+      link: /en/services/
       text: >
-        La Perfezione si rivela nel dettaglio...
+        The Perfection is revealed in detail...
     - image: /img/Kaki_di_Misilmeri.jpg
-      heading: Arte Interattiva
-      link: /it/opere/arte-interattiva/
+      heading: Interactive Art
+      link: /en/services/
       text: >
-        Se anche solo potessi mangiare uno di quei frutti...
+        If only I could eat one of those fruits ...
 slider:
   display: 'slide'
   array:
-    - { original: 'https://picsum.photos/id/1015/6000/4000.jpg', thumbnail: 'https://picsum.photos/id/1015/6000/4000.jpg', originalAlt: "Un fiordo selvaggio nel lontano Nord.", originalTitle: "Un fiordo selvaggio.", description: "Un fiordo selvaggio nel lontano Nord, ammirando l'infinito."}
-    - { original: 'https://picsum.photos/id/1019/5472/3648.jpg', thumbnail: 'https://picsum.photos/id/1019/5472/3648.jpg', originalAlt: 'Un bel tramonto sul mare.', originalTitle: 'Un bel tramonto sul mare.', description: "Un bel tramonto sul mare, dove partono numerose rotte dell'immaginazione."}
-    - { original: 'https://picsum.photos/id/1022/6000/3376.jpg', thumbnail: 'https://picsum.photos/id/1022/6000/3376.jpg', originalAlt: 'Un aurora boreale.', originalTitle: 'Un aurora boreale.', description: 'Un aurora boreale dalle sfumature verdastre.'}
+    - { original: 'https://i.picsum.photos/id/1015/6000/4000.jpg', thumbnail: 'https://i.picsum.photos/id/1015/6000/4000.jpg', originalAlt: "A wild fjord in the far north.", originalTitle: "A wild fjord in the far north.", description: "A wild fjord in the far North, admiring the infinite." }
+    - { original: 'https://i.picsum.photos/id/1019/5472/3648.jpg', thumbnail: 'https://i.picsum.photos/id/1019/5472/3648.jpg', originalAlt: 'A beautiful sunset over the sea.', originalTitle: 'A beautiful sunset over the sea.', description: 'A beautiful sunset over the sea, where numerous routes of imagination depart.'}
+    - { original: 'https://i.picsum.photos/id/1022/6000/3376.jpg', thumbnail: 'https://i.picsum.photos/id/1022/6000/3376.jpg', originalAlt: 'A Northern Lights.', originalTitle: 'A Northern Lights.', description: 'A northern lights with greenish hues.'}
 testimonials:
-  - author: anonimo
+  - author: anonimous
     quote: >-
-      L’albero del kaki è diventato “l’albero della pace”
-      perché dopo la distruzione di Nagasaki, nell’agosto 1945,
-      sopravvissero soltanto alcuni alberi di kaki.
+      The persimmon tree became "the tree of peace"
+      because after Nagasaki destruction in august 1945,
+      survived only some persimmon trees.
 ---
-## Pagina principale opere italiano
+
+## Artworks start page english
 
 Eu eram ingeniis te eu voluptate praesentibus ex malis te ita magna consequat ad
 aut amet aliquip. Ea tempor admodum praesentibus. Cillum nam de dolor

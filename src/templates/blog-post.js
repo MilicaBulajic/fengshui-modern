@@ -109,7 +109,7 @@ export const pageQuery = graphql`query BlogPostByID($id: String!) {
       node {
         articles {
           en
-          it
+          sr
         }
       }
     }

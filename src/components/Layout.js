@@ -10,7 +10,7 @@ import './all.sass'
 if (!Intl.RelativeTimeFormat) {
   require('@formatjs/intl-relativetimeformat/polyfill');
   require('@formatjs/intl-relativetimeformat/dist/locale-data/en'); // Add locale data for de
-  require('@formatjs/intl-relativetimeformat/dist/locale-data/it');
+  require('@formatjs/intl-relativetimeformat/dist/locale-data/sr');
 }
 
 const getIdJsonUrl = (id, langKey, jsonData) => {
@@ -58,7 +58,7 @@ const setLangsMenu = ( langsMenu, id, basePath, jsonData) => {
 };
 
 // add concatenated locale data
-//addLocaleData([...en, ...it]);
+//addLocaleData([...en, ...sr]);
 
 class TemplateWrapper extends Component {
   constructor(props) {

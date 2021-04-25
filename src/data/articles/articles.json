@@ -13,22 +13,17 @@
     {
       "id": "03",
       "en": "about",
-      "sr": "presentazione"
+      "sr": "onama"
     },
     {
       "id": "04",
       "en": "contact",
-      "sr": "contatto"
+      "sr": "kontakt"
     },
     {
       "id": "05",
       "en": "services",
-      "sr": "opere"
-    },
-    {
-      "id": "06",
-      "en": "services/sculpture/marble",
-      "sr": "opere/scultura/marmo"
+      "sr": "servisi"
     },
     {
       "id": "07",
@@ -36,109 +31,14 @@
       "sr": "2019-02-01-mio-primo-blog-post-gatsby"
     },
     {
-      "id": "08",
-      "en": "2019-03-11-news-from-art-planet",
-      "sr": "2019-03-11-notizie-dal-pianeta-arte"
-    },
-    {
-      "id": "09",
-      "en": "services/painting",
-      "sr": "opere/pittura"
-    },
-    {
-      "id": "10",
-      "en": "services/sculpture/introduction",
-      "sr": "opere/scultura/introduzione"
-    },
-    {
-      "id": "11",
-      "en": "services/performance/introduction",
-      "sr": "opere/performance/introduzione"
-    },
-    {
-      "id": "12",
-      "en": "services/new-media/aumgmented-reality",
-      "sr": "opere/new-media/realtà-aumentata"
-    },
-    {
       "id": "13",
-      "en": "contact/thanks",
-      "sr": "contatto/grazie"
+      "en": "thanks",
+      "sr": "hvala"
     },
     {
       "id": "14",
       "en": "tags",
       "sr": "tags"
-    },
-    {
-      "id": "15",
-      "en": "2019-05-03-art-of-kaki",
-      "sr": "2019-05-03-arte-di-kaki"
-    },
-    {
-      "id": "16",
-      "en": "services/portfolio",
-      "sr": "opere/portfolio"
-    },
-    {
-      "id": "17",
-      "en": "services/painting/new/abstract-art-persimmon-among-the-stars",
-      "sr": "opere/pittura/nuova/arte-astratta-caco-tra-le-stelle"
-    },
-    {
-      "id": "18",
-      "en": "services/painting/introduction",
-      "sr": "opere/pittura/introduzione"
-    },
-    {
-      "id": "19",
-      "en": "services/painting/new",
-      "sr": "opere/pittura/nuova"
-    },
-    {
-      "id": "20",
-      "en": "services/painting/oldest",
-      "sr": "opere/pittura/archivio"
-    },
-    {
-      "id": "21",
-      "en": "services/sculpture/bronze",
-      "sr": "opere/scultura/bronzo"
-    },
-    {
-      "id": "22",
-      "en": "services/sculpture/wood",
-      "sr": "opere/scultura/legno"
-    },
-    {
-      "id": "23",
-      "en": "services/sculpture/other-materials",
-      "sr": "opere/scultura/altri-materiali"
-    },
-    {
-      "id": "24",
-      "en": "services/performance/performance01",
-      "sr": "opere/performance/performance01"
-    },
-    {
-      "id": "25",
-      "en": "services/performance/performance02",
-      "sr": "opere/performance/performance02"
-    },
-    {
-      "id": "26",
-      "en": "services/performance/performance03",
-      "sr": "opere/performance/performance03"
-    },
-    {
-      "id": "27",
-      "en": "services/performance/performance04",
-      "sr": "opere/performance/performance04"
-    },
-    {
-      "id": "28",
-      "en": "services/new-media/experimental",
-      "sr": "opere/new-media/experimental"
     }
   ]
 }

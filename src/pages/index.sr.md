@@ -5,7 +5,7 @@ description: "qualche contenuto"
 templateKey: home
 tags:
   - web
-lang: it
+lang: sr
 date: "05-03-2019"
 image: /img/PersimmonHD.jpg
 heading: "Il kako è il frutto dell'artista..."
@@ -20,7 +20,7 @@ mainpitch:
   subheading: "Arte Interattiva"
   title: "Perche Kaki?"
   description: "Perche è un frutto dalle qualità incredibili..."
-  link: /en/artworks/new-media/augmented-reality/
+  link: /en/services
 main:
   image1:
     alt: un caco
@@ -37,8 +37,8 @@ imageCardSL:
   name: John Kaki
   description: Sono un artista visivo, seguimi in questa avventura...!
   website: www.kaki.com
-path: /it/
-slug: /it/
+path: /sr/
+slug: /sr/
 ---
 
 # Kaki pagina home

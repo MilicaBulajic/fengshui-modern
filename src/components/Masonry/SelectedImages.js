@@ -74,7 +74,7 @@ const SelectedImage = ({
         onClick={e => onClick(e, { index, photo })}
       />
       //<style>{`.not-selected:hover{outline:2px solid #06befa}`}</style>
-      <a href="/en/artworks/" className="">
+      <a href="/en/services/" className="">
       <p style={{ position: "absolute", zIndex: "4" }} className="has-text-centered has-text-info">Some text</p>
       </a>
     </div>

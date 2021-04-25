@@ -1,6 +1,6 @@
 module.exports = {
-  'about': ['about', 'presentazione'],
+  'about': ['about', 'onama'],
   'services': ['services', 'servisi'],
   'blog': ['blog', 'blog'],
-  'contact': ['contact', 'contatto']
+  'contact': ['contact', 'kontakt']
 };
