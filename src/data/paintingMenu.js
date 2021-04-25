@@ -1,5 +1,5 @@
 module.exports = {
-  'introduction': ['/en/artworks/painting/introduction/','/it/opere/pittura/introduzione/'],
-  'painting-new': ['/en/artworks/painting/new/','/it/opere/pittura/nuova/'],
-  'painting-oldest': ['/en/artworks/painting/oldest/', '/it/opere/pittura/archivio/'],
+  'introduction': ['/en/services/painting/introduction/','/sr/opere/pittura/introduzione/'],
+  'painting-new': ['/en/services/painting/new/','/sr/opere/pittura/nuova/'],
+  'painting-oldest': ['/en/services/painting/oldest/', '/sr/opere/pittura/archivio/'],
 };
