@@ -14,7 +14,7 @@ const RootMenuMobile = ( props ) => {
     const sel = select(props.langKey);
 
     return(
-    <div className='navbar-item has-dropdown is-hoverable'>
+    <div className='navbar-item is-hoverable'>
       <Link className="navbar-link" to={ "/" + props.langKey + "/" + menuTree.services[sel] + "/" }>
           <FaImage className="menu-names" />
           <FormattedMessage id="services"/>

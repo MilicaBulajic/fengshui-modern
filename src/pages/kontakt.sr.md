@@ -5,7 +5,7 @@ description: "Pagina per contattarmi"
 templateKey: contacts
 tags:
   - web
-lang: it
+lang: sr
 image: /img/PersimmonHD.jpg
 date: "08-03-2019"
 address: "Piazza Unità d'Italia, 34121 Trieste TS"

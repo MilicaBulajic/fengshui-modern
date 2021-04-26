@@ -1,86 +1,55 @@
 ---
 id: '05'
-title: "Pagina principale opere italiano"
-image: /img/Persimmon.jpg
-heading: La bellezza del caco
-headingDesc: >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-description: "La pagina principale delle opere"
+title: "Feng Shui & Modern design"
+image: /img/services.jpg
+heading: 
+description: "We like to remind you that every calendar year the energy in the house changes. It is vital that every year we do energy update, to protect us from negative influences and make positive energy support in our life. That is the importance of Feng Shui and how it helps you live a happy and fulfilled life. We are happy to help you in this!"
 templateKey: services
 tags:
   - art
 lang: sr
 date: "05-03-2019"
-path: /sr/servisi/
-slug: /sr/servisi/
+path: /en/services/
+slug: /en/services/
 intro:
   blurbs:
-    - image: /img/Persimmon.jpg
-      heading: Pittura
-      link: /sr/servisi/
+    - image: /img/1.jpg
+      heading: TRANSFORM AND CREATE THE LIFE YOU DESIRE
+      link: /en/services/
       text: >
-        In queste pagine potete trovare alcune interessante riflessioni sul caco.
-    - image: /img/Kaki.jpg
-      heading: Scultura
-      link: /sr/servisi/
+        in this section we map out the 9 zones of your house each one of which represents a particular area of your life (health, wealth, relationships, etc.), to intentionally align the energy of the space with the life you want to live.
+    - image: /img/2.jpg
+      heading: TRANSFORM AND CREATE THE LIFE YOU DESIRE WITH MODERN DESIGN
+      link: /en/services/
       text: >
-        Molti artisti hanno ritratto l'albero del caco, scopri quanti ne sono rimasti affascinati.
-    - image: /img/Caco.jpg
-      heading: Performance
-      link: /sr/servisi/
+        this is an astrological chart which uses time, space and objects to analyse positive and negative areas of the house and to heal/balance the energy. This includes analysing health, wealth, relationships, etc. of inhabitants. Please note that for the full effect of Feng Shui, a yearly update for the remedies needs to be done, since every calendar year the energy of the house changes.
+    - image: /img/3.jpg
+      heading: CREATE THE LIFE YOU DESIRE WITH YOUR HOUSE
+      link: /en/services/
       text: >
-        La Perfezione si rivela nel dettaglio...
-    - image: /img/Kaki_di_Misilmeri.jpg
-      heading: Arte Interattiva
-      link: /sr/servisi/
+        in this section we map out the 9 zones of your house each one of which represents a particular area of your life (health, wealth, relationships, etc.), to intentionally align the energy of the space with the life you want to live.
+    - image: /img/4.jpg
+      heading: HEAL/IMPORVE YOUR HOME = HEAL/IMPROVE YOUR LIFE
+      link: /en/services/
       text: >
-        Se anche solo potessi mangiare uno di quei frutti...
-slider:
-  display: 'slide'
-  array:
-    - { original: 'https://picsum.photos/id/1015/6000/4000.jpg', thumbnail: 'https://picsum.photos/id/1015/6000/4000.jpg', originalAlt: "Un fiordo selvaggio nel lontano Nord.", originalTitle: "Un fiordo selvaggio.", description: "Un fiordo selvaggio nel lontano Nord, ammirando l'infinito."}
-    - { original: 'https://picsum.photos/id/1019/5472/3648.jpg', thumbnail: 'https://picsum.photos/id/1019/5472/3648.jpg', originalAlt: 'Un bel tramonto sul mare.', originalTitle: 'Un bel tramonto sul mare.', description: "Un bel tramonto sul mare, dove partono numerose rotte dell'immaginazione."}
-    - { original: 'https://picsum.photos/id/1022/6000/3376.jpg', thumbnail: 'https://picsum.photos/id/1022/6000/3376.jpg', originalAlt: 'Un aurora boreale.', originalTitle: 'Un aurora boreale.', description: 'Un aurora boreale dalle sfumature verdastre.'}
-testimonials:
-  - author: anonimo
-    quote: >-
-      L’albero del kaki è diventato “l’albero della pace”
-      perché dopo la distruzione di Nagasaki, nell’agosto 1945,
-      sopravvissero soltanto alcuni alberi di kaki.
+        this is the report determining remedies derived from what is calculated in the Flying stars worksheet, which suggest the elements to use and ways how to balance the energy in every area of the house.
+    - image: /img/5.jpg
+      heading: HOW YOUR ENVIRONMENT SUPPORTS YOU TO HAVE SUCCESS
+      link: /en/services/
+      text: >
+        this is based on your date of birth and gender and it is used to show your compatibility with building space, e.g. your most supportive directions for sleeping, working, etc; for all residents of your home (to a max. of 6 people)
+    - image: /img/6.jpg
+      heading: MANIFEST YOUR DESIRE WITH FENG SHUI
+      link: /en/services/
+      text: >
+        this is the report determining remedies derived from what is calculated in the Flying stars worksheet, which suggest the elements to use and ways how to balance the energy in every area of the house.
 ---
-## Pagina principale opere italiano
 
-Eu eram ingeniis te eu voluptate praesentibus ex malis te ita magna consequat ad
-aut amet aliquip. Ea tempor admodum praesentibus. Cillum nam de dolor
-nostrud.Est summis magna ut senserit ubi deserunt quae pariatur. Aliqua
-cupidatat imitarentur. Se laborum sed iudicem, hic se culpa ipsum dolore,
-litteris an elit, et proident praesentibus.
+##
+Do you know that with a good Feng Shui you can love your home and your life?With a right organization of the space, we create an energy balance of your home that will reflect on your outside world as well. Good energy flow will positively affect your environment and your life and support you or bring changes in every field!
 
-Ita dolore nulla duis occaecat et ea ab magna velit eram. Aliqua singulis ea
-sempiternum. Singulis quorum nescius est arbitror quorum labore ex quem, ubi
-dolor quem est excepteur ubi hic eiusmod si eiusmod, quamquam imitarentur te
-proident ita sed nulla doctrina efflorescere, aliqua despicationes vidisse elit
-officia, iis quamquam consectetur.Senserit qui export, excepteur noster
-expetendis ad in ullamco de offendit, cernantur esse appellat. Quo cupidatat
-philosophari est minim id probant. Sunt incurreret ita firmissimum. O mandaremus
-qui deserunt.
 
-Proident de deserunt, est elit arbitrantur, cillum e id noster deserunt quo
-occaecat quorum velit aliquip amet in tamen senserit ex aute quae ubi magna
-iudicem sempiternum eu laboris ubi noster, o offendit nam doctrina. Nescius anim
-voluptate excepteur. Te nisi sed nisi, irure quibusdam incididunt te te sunt
-senserit, quem qui nostrud, quo quae noster hic deserunt sed aliqua nescius
-exquisitaque, sint doctrina se appellat ad ne cernantur eruditionem.Iis ex aute
-quid amet. Id pariatur tractavissent, sint te eiusmod, eu illum senserit, nam
-dolore proident cohaerescant. Sint non singulis.
+<b>We help you design your home with style and good Feng Shui</b>, which will energetically support you in life, where you will first of all feel wonderful. We help you create balanced and harmonious energy, through the right choice of colors, decorations, furniture, lighting, materials…
 
-Magna incurreret aut praetermissum, officia ab legam constias. Tamen do singulis
-an appellat veniam tamen constias legam. Irure graviterque admodum velit
-ingeniis si est o philosophari. Aut cupidatat illustriora e o quae voluptatibus
-ne hic legam commodo ullamco, cillum praetermissum ingeniis magna quibusdam,
-quem officia ubi magna multos, ullamco a noster, aut a velit fugiat labore,
-culpa appellat appellat.Ubi eram illum summis ullamco nam iudicem hic veniam.
-Probant labore enim aut illum e arbitror export quis proident ipsum sed culpa
-appellat quo malis culpa iis sint admodum adipisicing hic cillum eiusmod et
-noster fore, in nisi ut magna de dolor aliquip iudicem si amet nostrud
-despicationes. A in tamen enim nulla ne aliqua nescius fidelissimae.
+
+<b>Make your home a happy and warm place where you love to be in!</b>

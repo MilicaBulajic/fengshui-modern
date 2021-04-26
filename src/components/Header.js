@@ -53,7 +53,7 @@ const Header = class extends React.Component {
   if (isMobile) {
 
    let navMenu = document.getElementById("navMenu");
-   navMenu.style.backgroundColor = "#abd6d1"
+   navMenu.style.backgroundColor = "white"
 
  }
 }

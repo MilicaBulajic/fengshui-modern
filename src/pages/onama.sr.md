@@ -3,7 +3,7 @@ id: '03'
 title: ""
 description: "Something about me"
 templateKey: about
-lang: en
+lang: sr
 image: /img/about.jpg
 date: "05-03-2019"
 path: /sr/onama/

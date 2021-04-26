@@ -1,5 +1,6 @@
 import React from "react"
-const video = ({ videoSrcURL, videoTitle, ...props }) => (
+
+const Video = ({ videoSrcURL, videoTitle, ...props }) => (
   <div className="video-container">
     <iframe
       src={videoSrcURL}
@@ -14,4 +15,4 @@ const video = ({ videoSrcURL, videoTitle, ...props }) => (
     />
   </div>
 )
-export default video;
+export default Video;

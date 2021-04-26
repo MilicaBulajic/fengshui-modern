@@ -9,8 +9,8 @@ import './all.sass'
 
 if (!Intl.RelativeTimeFormat) {
   require('@formatjs/intl-relativetimeformat/polyfill');
-  require('@formatjs/intl-relativetimeformat/dist/locale-data/en');
-  require('@formatjs/intl-relativetimeformat/dist/locale-data/it');
+  require('@formatjs/intl-relativetimeformat/locale-data/en');
+  require('@formatjs/intl-relativetimeformat/locale-data/sr');
 }
 
 class TemplateWrapper extends Component {

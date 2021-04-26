@@ -6,46 +6,53 @@ import Layout from "../components/Layout"
 import SEO from '../components/SEO/SEO'
 import Content, { HTMLContent } from "../components/Content"
 import Slider from '../components/Slider'
-import Testimonials from '../components/Testimonials'
 import Features from '../components/Features'
+import Testimonials from "../components/Testimonials"
 
 const ServiceTemplate = ({
   title,
   content,
   contentComponent,
+  image,
   intro,
   heading,
   description,
-  display,
-  array,
-  testimonials,
   tags,
   langKey
 }) => {
   const PageContent = contentComponent || Content
   return (
-      <div className="container content">
-       <h1 className="title animated bounceInLeft">{title}</h1>
-        <div className="hero">
-          <Slider array={array} display={display}/>
-            <div className="section">
-              <h2 className="has-text-weight-semibold subtitle">
-              {heading}
-              </h2>
-              <div className="container content">
-                {description}
-               </div>
-             </div>
-             <Features gridItems={intro.blurbs} />
-          </div>
-             <div className="container content">
-               <Testimonials testimonials={testimonials} />
-             </div>
-             <section className="section">
-               <PageContent className="container content" content={content} />
-                <TagList tags={tags} langKey={langKey}/>
-             </section>
+    <div>
+    <div
+      className="full-width-image margin-top-0"
+      style={{
+        backgroundImage: `url(${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`,
+        backgroundPosition: `top`,
+        height: `550px`,
+      }}
+    >
+      <h1
+        className="has-text-weight-bold is-size-1"
+        style={{
+          fontFamily: "Caveat,cursive",
+          color: "#4a4a4a",
+          padding: "1rem",
+        }}
+      >
+        {heading}
+      </h1>
+    </div>
+    <section className="section services">
+        <h3>DESIGN YOUR HOME = DESIGN YOUR LIFE </h3>
+        <PageContent className="container content" content={content} />
+      </section>
+      <div className="column is-10 is-offset-1">
+      <Features gridItems={intro.blurbs} />
+      <p>{description}</p>
       </div>
+    </div>
     )
 }
 
@@ -58,7 +65,6 @@ ServiceTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
-  array: PropTypes.array,
   tags: PropTypes.array,
   langKey: PropTypes.string
 }
@@ -66,13 +72,15 @@ ServiceTemplate.propTypes = {
 class ServicesPage extends React.Component {
 
 render() {
+  var dataMarkdown = [];
+  if (this.props.data !== null) {
+    dataMarkdown = this.props.data.markdownRemark;
+  }
   const data = this.props.data;
   const { frontmatter } = data.markdownRemark;
-  const { display } = frontmatter.slider;
-  const { array } = frontmatter.slider;
   const description = frontmatter.headingDesc;
   const jsonData = data.allArticlesJson.edges[0].node.articles;
-  const image = frontmatter.image.childImageSharp.gatsbyImageData.src;
+  const image = frontmatter.image.childImageSharp.fluid.src;
   const langKey = frontmatter.lang;
   const tags = frontmatter.tags;
     return (
@@ -88,12 +96,10 @@ render() {
             title={frontmatter.title}
             content={data.markdownRemark.html}
             intro={frontmatter.intro}
-            display={display}
-            array={array}
             description={description}
-            testimonials={frontmatter.testimonials}
             tags={tags}
             langKey={langKey}
+            image={dataMarkdown.frontmatter.image}
             />
         </div>
       </Layout>
@@ -140,16 +146,14 @@ export const pageQuery = graphql`query ServicesQuery($id: String!) {
       lang
       image {
         childImageSharp {
-          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+            src
+          }
         }
       }
       heading
-      headingDesc
       description
-      testimonials {
-        author
-        quote
-      }
       intro {
         blurbs {
           image {
@@ -160,16 +164,6 @@ export const pageQuery = graphql`query ServicesQuery($id: String!) {
           heading
           link
           text
-        }
-      }
-      slider {
-        display
-        array {
-          original
-          thumbnail
-          originalAlt
-          originalTitle
-          description
         }
       }
     }

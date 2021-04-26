@@ -9,8 +9,8 @@ import './all.sass'
 
 if (!Intl.RelativeTimeFormat) {
   require('@formatjs/intl-relativetimeformat/polyfill');
-  require('@formatjs/intl-relativetimeformat/dist/locale-data/en'); // Add locale data for de
-  require('@formatjs/intl-relativetimeformat/dist/locale-data/sr');
+  require('@formatjs/intl-relativetimeformat/locale-data/en'); // Add locale data for de
+  require('@formatjs/intl-relativetimeformat/locale-data/sr');
 }
 
 const getIdJsonUrl = (id, langKey, jsonData) => {

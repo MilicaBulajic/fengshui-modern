@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO/SEO";
 import Content, { HTMLContent } from "../components/Content";
-import video from "../components/video";
+import Video from "../components/Video";
 
 const AboutPageTemplate = ({ title, content, contentComponent, image, tags, langKey }) => {
   const PageContent = contentComponent || Content;
@@ -43,7 +43,7 @@ const AboutPageTemplate = ({ title, content, contentComponent, image, tags, lang
                 </div>
                 <div className="tile is-parent">
                   <article className="tile is-child">
-                    <video
+                    <Video
                       videoSrcURL="https://www.youtube.com/embed/FFM_Z0cctgk"
                     />
                   </article>
@@ -74,7 +74,7 @@ class AboutPage extends React.Component {
     }
     const jsonData = this.props.data.allArticlesJson.edges[0].node.articles;
     const { frontmatter } = dataMarkdown;
-    const image = frontmatter.image.childImageSharp.gatsbyImageData.src;
+    const image = frontmatter.image.childImageSharp.fluid.src;
     const langKey = frontmatter.lang;
     const tags = frontmatter.tags;
     return (
@@ -87,6 +87,7 @@ class AboutPage extends React.Component {
         <SEO frontmatter={frontmatter} postImage={image} />
         <div>
           <AboutPageTemplate
+            image={dataMarkdown.frontmatter.image}
             contentComponent={HTMLContent}
             title={dataMarkdown.frontmatter.title}
             content={dataMarkdown.html}

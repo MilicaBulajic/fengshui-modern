@@ -16,9 +16,7 @@ const getIcon = langKey => {
 const SelectLanguage = (props) => {
   const links = props.langs.map(lang =>
       <li className="flags" key={lang.langKey} selected={lang.selected}>
-        <Link to={lang.link} alt={lang.langKey} style={{
-          color: '#D64000'
-        }}>
+        <Link to={lang.link} alt={lang.langKey}>
         {getIcon(lang.langKey)}
           </Link>
       </li>

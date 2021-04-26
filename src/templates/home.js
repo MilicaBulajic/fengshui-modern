@@ -1,23 +1,21 @@
 import React from "react"
 import * as PropTypes from "prop-types"
-import TagList from '../components/TagList'
-import { graphql } from 'gatsby'
+import TagList from "../components/TagList"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import SEO from '../components/SEO/SEO'
+import SEO from "../components/SEO/SEO"
 import Content, { HTMLContent } from "../components/Content"
-import select from '../components/utils'
-import Slider from '../components/Slider'
-import Banner from '../components/Banner'
-import Testimonials from '../components/Testimonials'
-import CardSlide from '../components/CardSlide'
-
+import Testimonials from "../components/Testimonials"
+import CardSlide from "../components/CardSlide"
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage"
+import Lightbox from "../components/Lightbox"
+import FollowUs from "../components/FollowUs"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const HomePageTemplate = ({
-  imageCardSL,
   image,
+  images,
   heading,
-  display,
-  array,
   mainpitch,
   main,
   testimonials,
@@ -25,79 +23,101 @@ const HomePageTemplate = ({
   content,
   contentComponent,
   tags,
-  langKey
+  langKey,
 }) => {
-  const PageContent = contentComponent || Content
+  const PageContent = contentComponent || Content;
 
   return (
     <div>
       <div
-    className="full-width-image margin-top-0"
-    style={{
-      backgroundImage: `url(${
-        !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-      })`,
-      backgroundPosition: `top left`,
-      backgroundAttachment: `fixed`,
-    }}
-  >
-    <div
-      style={{
-        display: 'flex',
-        height: '150px',
-        lineHeight: '1',
-        justifyContent: 'space-around',
-        alignItems: 'left',
-        flexDirection: 'column',
-      }}
-    >
-      <h1
-        className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen is-centered animated bounceInLeft"
+        className="full-width-image margin-top-0"
         style={{
-          boxShadow:
-            'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-          backgroundColor: 'rgb(255, 68, 0)',
-          color: 'white',
-          lineHeight: '1',
-          padding: '0.25em',
+          backgroundImage: `url(${
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
+          backgroundPosition: `top left`,
+          height: `520px`,
         }}
       >
-        {title}
-      </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen animated bounceInRight"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {heading}
-        </h3>
-       </div>
-       </div>
-       <Slider array={array} display={display}/>
-       <Banner main={main.image1} mainpitch={mainpitch}/>
-       <div className="container section">
-       </div>
-       <div className="section">
-          <Testimonials testimonials={testimonials} />
-       </div>
-       <CardSlide
-       imageInfo={imageCardSL}
-       name={imageCardSL.name}
-       description={imageCardSL.description}
-       website={imageCardSL.website}/>
-        <section className="section">
-          <PageContent className="container content" content={content} />
-            <TagList tags={tags} langKey={langKey}/>
-        </section>
+        <div className="cover-text animated bounceInRight">
+          <h2 className="is-size-5-mobile animated bounceInRight">{heading}</h2>
+          <h1 className="is-size-5-mobile animated bounceInRight">{title}</h1>
+          <button
+            onClick={() => {
+              navigate("about");
+            }}
+          >
+            ABOUT
+          </button>
+          <button
+            onClick={() => {
+              navigate("services");
+            }}
+          >
+            CHOSE YOUR PACKAGE
+          </button>
+        </div>
       </div>
+      <section className="section full-width-text">
+        <div className="columns mobile">
+          <div className="column is-8 is-offset-1">
+            <h2 className="has-text-weight-semibold">{mainpitch.title}</h2>
+            <h4>{mainpitch.heading}</h4>
+            <p>{mainpitch.description}</p>
+          </div>
+          <div className="column is-2 second"></div>
+        </div>
+      </section>
+      <section>
+        <div className="column is-10 is-offset-1">
+          <div className="columns">
+            <div className="column is-12 has-text-centered"></div>
+          </div>
+        </div>
+      </section>
+      <section className="about">
+        <div className="column is-10 is-offset-1">
+          <div className="tile is-ancestor">
+            <div className="tile is-vertical">
+              <div className="tile">
+                <div className="tile is-parent is-vertical">
+                  <article className="tile is-child">
+                    <h3>{main.heading}</h3>
+                    <PageContent className="content" content={content} />
+                    <button
+                      onClick={() => {
+                        navigate("services");
+                      }}
+                    >
+                      CHOSE YOUR PACKAGE
+                    </button>
+                  </article>
+                </div>
+                <div className="tile is-parent">
+                  <article className="tile is-child">
+                    <PreviewCompatibleImage imageInfo={main.image1} />
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+ 
+      </section>
+      <section className="wps">
+        <div className="column is-10 is-offset-1">
+          <h3>{mainpitch.subheading}</h3>
+          <Testimonials testimonials={testimonials} />
+        </div>
+      </section>
+      <section>
+        <FollowUs />
+      </section>
+    </div>
   );
-}
+};
 
 HomePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
@@ -105,40 +125,38 @@ HomePageTemplate.propTypes = {
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   tags: PropTypes.array,
-  langKey: PropTypes.string
-}
+  langKey: PropTypes.string,
+  images: PropTypes.array,
+};
 
 class HomePage extends React.Component {
-
   render() {
     let data;
     let dataMarkdown = [];
     if (this.props.data !== null) {
-      dataMarkdown = this.props.data.markdownRemark
+      dataMarkdown = this.props.data.markdownRemark;
       data = this.props.data;
     }
     const jsonData = data.allArticlesJson.edges[0].node.articles;
-    const langKey = dataMarkdown.frontmatter.lang
+    const langKey = dataMarkdown.frontmatter.lang;
     const { frontmatter } = data.markdownRemark;
-    const { display } = frontmatter.slider;
-    const { array } = frontmatter.slider;
-    const sel = select(langKey);
     const image = frontmatter.image.childImageSharp.fluid.src;
     const tags = frontmatter.tags;
+    const images = frontmatter.images;
 
     return (
-      <Layout className="content" data={this.props.data} jsonData={jsonData} location={this.props.location}>
-        <SEO
-          frontmatter={frontmatter}
-          postImage={image}
-        />
+      <Layout
+        className="content"
+        data={this.props.data}
+        jsonData={jsonData}
+        location={this.props.location}
+      >
+        <SEO frontmatter={frontmatter} postImage={image} />
         <div>
-            <HomePageTemplate
+          <HomePageTemplate
             imageCardSL={dataMarkdown.frontmatter.imageCardSL}
             image={dataMarkdown.frontmatter.image}
             heading={dataMarkdown.frontmatter.heading}
-            display={display}
-            array={array}
             mainpitch={dataMarkdown.frontmatter.mainpitch}
             main={dataMarkdown.frontmatter.main}
             testimonials={dataMarkdown.frontmatter.testimonials}
@@ -147,102 +165,103 @@ class HomePage extends React.Component {
             content={dataMarkdown.html}
             tags={tags}
             langKey={langKey}
-             />
+            images={images}
+            testimonials={dataMarkdown.frontmatter.testimonials}
+          />
         </div>
       </Layout>
-    )
+    );
   }
 }
 
 HomePage.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   data: PropTypes.object.isRequired,
-}
+};
 
-export default HomePage
+export default HomePage;
 
-export const pageQuery = graphql`query HomePageQuery($id: String!) {
-  site {
-    siteMetadata {
-      languages {
-        defaultLangKey
-        langs
-      }
-    }
-  }
-  allArticlesJson(filter: {title: {eq: "home"}}) {
-    edges {
-      node {
-        articles {
-          en
-          sr
+export const pageQuery = graphql`
+  query HomePageQuery($id: String!) {
+    site {
+      siteMetadata {
+        languages {
+          defaultLangKey
+          langs
         }
       }
     }
-  }
-  markdownRemark(id: {eq: $id}) {
-    html
-    frontmatter {
-      id
-      title
-      description
-      tags
-      lang
-      image {
-        childImageSharp {
-          fluid(maxWidth: 2048, quality: 100) {
-            ...GatsbyImageSharpFluid
-            src
+    allArticlesJson(filter: { title: { eq: "home" } }) {
+      edges {
+        node {
+          articles {
+            en
+            sr
+          }
+        }
+      }
+    }
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        id
+        title
+        description
+        tags
+        lang
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+              src
             }
           }
         }
-      heading
-      mainpitch {
         heading
-        subheading
-        title
-        description
-        link
-      }
-      slider {
-        display
-        array {
-          original
-          thumbnail
-          originalAlt
-          originalTitle
+        mainpitch {
+          heading
+          subheading
+          title
           description
+          link
         }
-      }
-      imageCardSL {
-        alt
-        image {
-          childImageSharp {
-            gatsbyImageData(width: 128, quality: 84, layout: CONSTRAINED)
+        main {
+          image1 {
+            alt
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 500, quality: 90, layout: CONSTRAINED)
+              }
+            }
           }
         }
-        name
-        description
-        website
-      }
-      main {
-        image1 {
+        images {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+                src
+              }
+            }
+          }
+          alt
+        }
+        testimonials {
+          author
+          quote
           alt
           image {
             childImageSharp {
-              gatsbyImageData(width: 500, quality: 90, layout: CONSTRAINED)
+              fluid(maxWidth: 128, quality: 84) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
       }
-      testimonials {
-        author
-        quote
+      fields {
+        slug
       }
     }
-    fields {
-      slug
-    }
   }
-}
-`
+`;

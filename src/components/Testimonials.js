@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { v4 } from "uuid";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Testimonials = ({ testimonials }) => (
   <div className="columns is-multiline">
