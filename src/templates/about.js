@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO/SEO";
 import Content, { HTMLContent } from "../components/Content";
-import Video from "../components/Video";
+import VideoYT from "../components/VideoYT";
 
 const AboutPageTemplate = ({ title, content, contentComponent, image, tags, langKey }) => {
   const PageContent = contentComponent || Content;
@@ -43,7 +43,7 @@ const AboutPageTemplate = ({ title, content, contentComponent, image, tags, lang
                 </div>
                 <div className="tile is-parent">
                   <article className="tile is-child">
-                    <Video
+                    <VideoYT
                       videoSrcURL="https://www.youtube.com/embed/FFM_Z0cctgk"
                     />
                   </article>

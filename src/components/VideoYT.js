@@ -1,10 +1,9 @@
 import React from "react"
 
-const Video = ({ videoSrcURL, videoTitle, ...props }) => (
+const VideoYT = ({ videoSrcURL, frameBorder, ...props }) => (
   <div className="video-container">
     <iframe
       src={videoSrcURL}
-      title={videoTitle}
       allow="accelerometer; autoplay; encrypted-media;"
       frameBorder="0"
       width="640" 
@@ -15,4 +14,4 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => (
     />
   </div>
 )
-export default Video;
+export default VideoYT;

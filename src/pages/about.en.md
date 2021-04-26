@@ -11,7 +11,6 @@ slug: /en/about/
 attachments:
   - "/img/certificate1.pdf"
   - "/img/certificate2.pdf"
-videoSourceURL: https://www.youtube.com/watch?v=BN64vf0Em_A
 ---
 
 This is our story...
