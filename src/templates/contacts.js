@@ -46,7 +46,7 @@ const ContactPageTemplate = ({
       phone={phone}
       email={email}
       />
-    <div className="box">
+     <div className="box">
     <h4 className="subtitle"><FormattedMessage id="contact.fill-the-form"/></h4>
       <form
         name="contact"
@@ -90,52 +90,10 @@ const ContactPageTemplate = ({
         </div>
         <div className="field">
           <div className="control">
-          <label className="radio menu-names">
-            <input
-              type="radio"
-              name="gender-male"
-              value="male"
-              onChange={handleChange}
-              defaultChecked
-            />
-            <span><FormattedMessage id="contact.gender.male"/></span>
-          </label>
-          <label className="radio">
-            <input
-              type="radio"
-              name="gender-female"
-              value="female"
-              onChange={handleChange}
-            />
-            <span><FormattedMessage id="contact.gender.female"/></span>
-          </label>
         </div>
         </div>
         <div className="field">
         <label className="label">
-        <p className="content has-text-weight-semibold"><FormattedMessage id='contact.enquiry'/></p>
-            <div className="select">
-            <select
-              className="content"
-              name="type-enquiry"
-              defaultValue="Type of Enquiry"
-              onChange={handleChange}
-              required
-            >
-              <option name="options" disabled hidden>
-                Choose
-              </option>
-              <FormattedMessage id='contact.enquiry.a' key={'op' + '-' + 'a'}>
-                {(message) => <option value='a'>{message}</option>}
-              </FormattedMessage>
-              <FormattedMessage id='contact.enquiry.b' key={'op' + '-' + 'b'}>
-                {(message) => <option value='b'>{message}</option>}
-              </FormattedMessage>
-              <FormattedMessage id='contact.enquiry.c' key={'op' + '-' + 'c'}>
-                {(message) => <option value='c'>{message}</option>}
-              </FormattedMessage>
-            </select>
-            </div>
           </label>
         </div>
         <div className="field">
@@ -146,7 +104,7 @@ const ContactPageTemplate = ({
         </div>
         <div className="field">
         <div className="control">
-          <button className="button is-link" type="submit"><FormattedMessage id="contact.send"/></button>
+          <button className="button" type="submit"><FormattedMessage id="contact.send"/></button>
         </div>
         </div>
       </form>
@@ -232,8 +190,6 @@ class ContactPage extends React.Component {
                 action={action}
                  />
             </div>
-
-        <OsmMap lat={lat} lng={lng} message={message}/>
       <FollowUs link={linkinsta} instagram={instagram}/>
     </Layout>
     )

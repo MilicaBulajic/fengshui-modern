@@ -1,7 +1,7 @@
 ---
 id: '04'
-title: "Pagina di contatto"
-description: "Pagina per contattarmi"
+title: "Contact page"
+description: "Page to send an e-mail"
 templateKey: contacts
 tags:
   - web
@@ -9,22 +9,22 @@ lang: sr
 image: /img/PersimmonHD.jpg
 date: "08-03-2019"
 address: "Piazza Unità d'Italia, 34121 Trieste TS"
-phone: '+3900123456789'
-email: 'kaki@kaki.com'
-linkinsta: 'kaki'
-instagram: '@kaki'
+phone: '+123456789'
+email: 'fengshui.home.89@gmail.com'
+linkinsta: 'fengshui.home'
+instagram: '@fengshui.home'
 locations:
-  lat: 45.6500779
-  lng: 13.7677618
-  message: 'Kaki è qui!'
+   lat: 45.6500779
+   lng: 13.7677618
+   message: ''
 imageCardSL:
   alt: "immagine"
   image: /img/128x128.png
-  name: John Kaki
-  description: Sono un artista visivo, seguimi in questa avventura...!
-  website: www.kaki.com
+  name: Tijana and Andrew
+  description: We are Feng Shui specialists, follow us in this adventure!
+  website: 
 path: /sr/kontakt
 slug: /sr/kontakt
 ---
 
-In questa pagina di contatto potete inviare un messaggio e-mail.
+Contact us for more informations.

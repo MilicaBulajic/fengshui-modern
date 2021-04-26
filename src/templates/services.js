@@ -158,7 +158,7 @@ export const pageQuery = graphql`query ServicesQuery($id: String!) {
         blurbs {
           image {
             childImageSharp {
-              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+              gatsbyImageData(width: 360, quality: 64, layout: CONSTRAINED)
             }
           }
           heading

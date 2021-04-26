@@ -9,15 +9,18 @@ const Testimonials = ({ testimonials }) => (
     {testimonials.map((testimonial) => (
       <article key={v4()} className="is-parent column is-4">
         <div
-          style={{ paddingTop: "10%", paddingBottom: "10%", width: "auto", innerHeight: "auto" }}
-          className="message-body testimonials"
-        >
+          style={{
+            paddingTop: "10%",
+            paddingBottom: "10%",
+            width: "auto",
+            innerHeight: "auto",
+          }}
+          className="message-body testimonials">
           <figure className="image is-128x128">
-          <PreviewCompatibleImage
-            
-            imageInfo={testimonial.image}
-            alt={testimonial.alt}
-          />
+            <GatsbyImage
+              image={testimonial.image.childImageSharp.gatsbyImageData}
+              alt={testimonial.alt}
+            />
           </figure>
           {testimonial.quote}
           <br />
