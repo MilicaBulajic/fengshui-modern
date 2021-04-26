@@ -33,7 +33,7 @@ const HomePageTemplate = ({
   return (
     <div>
       <div
-        className="full-width-image margin-top-0"
+        className="full-width-image margin-top-0 mobilehome"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image

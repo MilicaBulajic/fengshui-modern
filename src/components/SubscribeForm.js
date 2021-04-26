@@ -1,47 +1,50 @@
-import React, { useState } from 'react';
-import addToMailchimp from 'gatsby-plugin-mailchimp';
+import addToMailchimp from "gatsby-plugin-mailchimp";
+import React from "react";
 
-function SubscribeForm() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = async event => {
-    event.preventDefault();
-   
-    const { result, msg } = await addToMailchimp(email);
-    result === 'success' && setEmail('');
-
-    setMessage(msg.split('<')[0]);
-    setStatus(result);
+export default class MailChimpForm extends React.Component {
+  constructor() {
+    super();
+    this.state = { email: "", result: null };
+  }
+  _handleSubmit = async (e) => {
+    e.preventDefault();
+    const result = await addToMailchimp(this.state.email);
+    this.setState({ result: result });
   };
-
-  const handleChange = event => setEmail(event.target.value);
-
-  return (
-    <form>
-      <p>
-        Download Booklet of serive + Free Feng Shui tips for a happy live!
-      </p>
-      <div>
+  handleChange = (event) => {
+    this.setState({ email: event.target.value });
+  };
+  render() {
+    return this.state.result === "success " ? (
+      <div>SUCCESS</div>
+    ) : this.state.result === "error" ? (
+      <div>ERROR</div>
+    ) : (
+      <form>
+        <p>
+          Download Booklet of serive + Free Feng Shui tips for a happy live!
+        </p>
         <input
+          id="outlined-email-input"
+          label="Email"
           type="email"
-          onChange={handleChange}
-          value={email}
-          placeholder="Email"
-          required
+          name="email"
+          autoComplete="email"
+          placeholder="Email address"
+          variant="outlined"
+          onChange={this.handleChange}
         />
-        <span
-          status={status}
+        <br />
+        <button
+          variant="contained"
+          color="primary"
+          label="Submit"
+          type="submit"
+          onSubmit={this._handleSubmit}
         >
-          {message}
-        </span>
-      </div>
-      <button type="submit" onClick={handleSubmit}>
-        YES, PLEASE!
-      </button>
-    </form>
-  );
+          YES, PLEASE!
+        </button>
+      </form>
+    );
+  }
 }
-
-export default SubscribeForm;
