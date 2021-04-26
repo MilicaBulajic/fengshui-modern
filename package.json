@@ -26,6 +26,7 @@
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-i18n-tags": "^1.0.0",
     "gatsby-plugin-image": "^1.0.0",
+    "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^3.0.0",
     "gatsby-plugin-netlify": "^3.0.0",
     "gatsby-plugin-netlify-cms": "^5.0.0",

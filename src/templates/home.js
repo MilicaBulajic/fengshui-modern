@@ -10,6 +10,7 @@ import CardSlide from "../components/CardSlide";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Lightbox from "../components/Lightbox";
 import FollowUs from "../components/FollowUs";
+import SubscribeForm from "../components/SubscribeForm";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { navigate } from "gatsby";
 
@@ -67,7 +68,9 @@ const HomePageTemplate = ({
             <h4>{mainpitch.heading}</h4>
             <p>{mainpitch.description}</p>
           </div>
-          <div className="column is-2 second"></div>
+          <div className="column is-2 second">
+            <SubscribeForm />
+          </div>
         </div>
       </section>
       <section>

@@ -22,7 +22,7 @@ imageCardSL:
   image: /img/128x128.png
   name: Tijana and Andrew
   description: We are Feng Shui specialists, follow us in this adventure!
-  website: 
+  website: website
 path: /en/contact
 slug: /en/contact
 ---
