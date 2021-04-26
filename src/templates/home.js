@@ -1,16 +1,17 @@
-import React from "react"
-import * as PropTypes from "prop-types"
-import TagList from "../components/TagList"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import SEO from "../components/SEO/SEO"
-import Content, { HTMLContent } from "../components/Content"
-import Testimonials from "../components/Testimonials"
-import CardSlide from "../components/CardSlide"
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage"
-import Lightbox from "../components/Lightbox"
-import FollowUs from "../components/FollowUs"
+import React from "react";
+import * as PropTypes from "prop-types";
+import TagList from "../components/TagList";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO/SEO";
+import Content, { HTMLContent } from "../components/Content";
+import Testimonials from "../components/Testimonials";
+import CardSlide from "../components/CardSlide";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import Lightbox from "../components/Lightbox";
+import FollowUs from "../components/FollowUs";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { navigate } from "gatsby";
 
 const HomePageTemplate = ({
   image,
@@ -19,6 +20,7 @@ const HomePageTemplate = ({
   mainpitch,
   main,
   testimonials,
+  intro,
   title,
   content,
   contentComponent,
@@ -103,8 +105,13 @@ const HomePageTemplate = ({
           </div>
         </div>
       </section>
-      <section>
- 
+      <section className="whyfs">
+        <div className="tile is-parent">
+          <article className="tile is-child">
+            <h3>WHY FENG SHUI</h3>
+            <Lightbox gridItems={intro.blurbs} />
+          </article>
+        </div>
       </section>
       <section className="wps">
         <div className="column is-10 is-offset-1">
@@ -127,6 +134,9 @@ HomePageTemplate.propTypes = {
   tags: PropTypes.array,
   langKey: PropTypes.string,
   images: PropTypes.array,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
 };
 
 class HomePage extends React.Component {
@@ -165,7 +175,7 @@ class HomePage extends React.Component {
             content={dataMarkdown.html}
             tags={tags}
             langKey={langKey}
-            images={images}
+            intro={frontmatter.intro}
             testimonials={dataMarkdown.frontmatter.testimonials}
           />
         </div>
@@ -226,6 +236,7 @@ export const pageQuery = graphql`
           link
         }
         main {
+          heading
           image1 {
             alt
             image {
@@ -235,16 +246,14 @@ export const pageQuery = graphql`
             }
           }
         }
-        images {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-                src
+        intro {
+          blurbs {
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 360, quality: 64, layout: CONSTRAINED)
               }
             }
           }
-          alt
         }
         testimonials {
           author

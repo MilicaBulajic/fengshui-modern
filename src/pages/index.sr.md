@@ -47,6 +47,14 @@ testimonials:
       Lorem ipsum, or lipsum as it is sometimes known, web designs.
     image: /img/128x128.png
     alt: vddfgdf
+intro:
+  blurbs:
+    - image: /img/one.jpg
+      alt: "energy"
+    - image: /img/two.jpg
+      alt: "health"
+    - image: /img/three.jpg
+      alt: "wealth"
 path: /sr/
 slug: /sr/
 ---
