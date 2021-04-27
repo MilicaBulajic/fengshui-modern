@@ -25,6 +25,7 @@ const HomePageTemplate = ({
   title,
   content,
   contentComponent,
+  description,
   tags,
   langKey,
 }) => {
@@ -69,6 +70,7 @@ const HomePageTemplate = ({
             <p>{mainpitch.description}</p>
           </div>
           <div className="column is-2 second">
+          <p>{description}</p>
             <SubscribeForm />
           </div>
         </div>
