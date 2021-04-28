@@ -1,37 +1,61 @@
-import React, { Component } from "react";
-import Mailchimp from "react-mailchimp-form";
+import addToMailchimp from "gatsby-plugin-mailchimp";
+import React from "react";
 
-class SubscribeForm extends Component {
+export default class MailChimpForm extends React.Component {
+  constructor() {
+    super();
+    this.state = { name: "", email: "", result: null };
+  }
+  _handleSubmit = async (e) => {
+    e.preventDefault();
+    const result = await addToMailchimp(this.state.email, {
+      FNAME: this.state.name,
+    });
+    this.setState({ result: result });
+  };
+
+  handleNameChange = (event) => {
+    this.setState({ name: event.target.value });
+  };
+  handleEmailChange = (event) => {
+    this.setState({ email: event.target.value });
+  };
+
   render() {
-    return (
-      <Mailchimp
-      action={process.env.MAILCHIMP_ENDPOINT}
-        fields={[
-          {
-            name: "FNAME",
-            placeholder: "Name",
-            type: "text",
-            required: true,
-          },
-          {
-            name: "EMAIL",
-            placeholder: "Email",
-            type: "email",
-            required: true,
-          }
-        ]}
-        messages={{
-          sending: "Sending...",
-          success: "Thank you for subscribing!",
-          error: "An unexpected internal error has occurred.",
-          empty: "You must write an e-mail.",
-          duplicate: "Too many subscribe attempts for this email address",
-          button: "YES PLEASE!",
-        }}
-        className="form"
-      />
+    return this.state.result === "success " ? (
+      <div>SUCCESS</div>
+    ) : this.state.result === "error" ? (
+      <div>ERROR</div>
+    ) : (
+      <form onSubmit={this._handleSubmit}>
+        <input
+          id="outlined-name-input"
+          label="Name"
+          type="name"
+          name="name"
+          autoComplete="name"
+          variant="outlined"
+          onChange={this.handleNameChange}
+        />
+        <input
+          id="outlined-email-input"
+          label="Email"
+          type="email"
+          name="email"
+          autoComplete="email"
+          variant="outlined"
+          onChange={this.handleEmailChange}
+        />
+        <br />
+        <button
+          variant="contained"
+          color="primary"
+          label="Submit"
+          type="submit"
+        >
+          YES PLEASE!
+        </button>
+      </form>
     );
   }
 }
-
-export default SubscribeForm;

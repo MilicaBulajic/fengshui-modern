@@ -1,7 +1,7 @@
 ---
 id: "01"
 title: "Feng Shui & Modern Design"
-description: Download Booklet of serive + Free Feng Shui tips for a happy live!
+description: Download Booklet of serives + Free Feng Shui tips for a happy life!
 templateKey: home
 tags:
   - web
@@ -59,7 +59,7 @@ path: /en/
 slug: /en/
 ---
 
-Feng Shui is an ancient Chinese art which we use in our modern time and modern home design to help us create the life we desire. <b>When we heal the energy in us and around us, we transform our life.</b> We enhance the good energy of the space which will positively influence your life and bring good fortune. We also heal/balance the negative energy of the space which blocks you and create obstacles in your life.
+Feng Shui is an ancient Chinese art which we use in our modern time and modern home design to help us create the life we desire. <b>When we heal the energy in us and around us, we transform our life.</b> 
 
 <b>The balance of the energy in your house will eventually reflect in your life.</b>
 If we can first heal the energy in the house, why wait for it to manifest in your life or your body?
