@@ -5,14 +5,14 @@ import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 function SubscribeForm() {
   const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
+  const [FNAME, setName] = useState('');
   const [status, setStatus] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = async event => {
     event.preventDefault();
     // Mailchimp always responds with status code 200, accompanied by a string indicating the result of the response.
-    const { result, msg } = await addToMailchimp(email, {FNAME: name});
+    const { result, msg } = await addToMailchimp(email, FNAME);
     result === 'success' && setEmail('');
     // Removes the HTML returned in some response messages in case of error
     setMessage(msg.split('<')[0]);
@@ -34,14 +34,14 @@ function SubscribeForm() {
       <input
           type="name"
           onChange={handleNameChange}
-          value={name}
+          name="FNAME"
           placeholder="Name"
           required
         />
         <input
           type="email"
           onChange={handleEmailChange}
-          value={email}
+          name="email"
           placeholder="example@domain.com"
           required
         />
