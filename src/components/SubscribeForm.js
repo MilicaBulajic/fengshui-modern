@@ -1,61 +1,60 @@
-import addToMailchimp from "gatsby-plugin-mailchimp";
-import React from "react";
+import addToMailchimp from "gatsby-plugin-mailchimp"
+import React, { useState } from "react"
 
-export default class MailChimpForm extends React.Component {
-  constructor() {
-    super();
-    this.state = { name: "", email: "", result: null };
+const SubscribeForm = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [disabled, setDisabled] = useState(false)
+
+  const handleSubmit = async event => {
+    event.preventDefault()
+    setDisabled(true)
+    setMessage("Sending...")
+    const response = await addToMailchimp(email, {FNAME: name})
+    if (response.result === "error") {
+      if (response.msg.toLowerCase().includes("already subscribed")) {
+        setMessage("You're already on to the list!")
+      } else {
+        setMessage("Some error occured while subscribing you to the list.")
+      }
+      setDisabled(false)
+    } else {
+      setMessage(
+        "Thanks! Please check your e-mail and click the confirmation link."
+      )
+    }
   }
-  _handleSubmit = async (e) => {
-    e.preventDefault();
-    const result = await addToMailchimp(this.state.email, {
-      FNAME: this.state.name,
-    });
-    this.setState({ result: result });
-  };
 
-  handleNameChange = (event) => {
-    this.setState({ name: event.target.value });
-  };
-  handleEmailChange = (event) => {
-    this.setState({ email: event.target.value });
-  };
-
-  render() {
-    return this.state.result === "success " ? (
-      <div>SUCCESS</div>
-    ) : this.state.result === "error" ? (
-      <div>ERROR</div>
-    ) : (
-      <form onSubmit={this._handleSubmit}>
-        <input
-          id="outlined-name-input"
-          label="Name"
+  return (
+    <div>
+      <h2>
+        Sign up for my newsletter
+      </h2>
+      <form onSubmit={handleSubmit}>
+      <input
+          aria-label="Name"
+          onChange={event => setName(event.target.value)}
+          placeholder="Enter your name"
+          required
           type="name"
-          name="name"
-          autoComplete="name"
-          variant="outlined"
-          onChange={this.handleNameChange}
         />
         <input
-          id="outlined-email-input"
-          label="Email"
+          aria-label="Email address"
+          onChange={event => setEmail(event.target.value)}
+          placeholder="Enter your email"
+          required
           type="email"
-          name="email"
-          autoComplete="email"
-          variant="outlined"
-          onChange={this.handleEmailChange}
         />
-        <br />
-        <button
-          variant="contained"
-          color="primary"
-          label="Submit"
-          type="submit"
-        >
-          YES PLEASE!
-        </button>
+        <div>
+          <button disabled={disabled}>Sign up</button>
+        </div>
       </form>
-    );
-  }
+      <div>
+        {message}
+      </div>
+    </div>
+  )
 }
+
+export default SubscribeForm
