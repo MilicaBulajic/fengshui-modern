@@ -11,7 +11,7 @@ const SubscribeForm = () => {
     event.preventDefault()
     setDisabled(true)
     setMessage("Sending...")
-    const response = await addToMailchimp(email, {FNAME: name})
+    const response = await addToMailchimp(email, name)
     if (response.result === "error") {
       if (response.msg.toLowerCase().includes("already subscribed")) {
         setMessage("You're already on to the list!")
