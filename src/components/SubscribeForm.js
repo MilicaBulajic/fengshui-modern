@@ -7,10 +7,28 @@ function SubscribeForm() {
   const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  function timeout(ms, promise) {
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => {
+        reject(new Error('TIMEOUT'))
+      }, ms)
+  
+      promise
+        .then(value => {
+          clearTimeout(timer)
+          resolve(value)
+        })
+        .catch(reason => {
+          clearTimeout(timer)
+          reject(reason)
+        })
+    })
+  }
+  
   const handleSubmit = () => {
     addToMailchimp(email, { FNAME: name }).then((data) => {
       if (data.result == "error") {
-        console.log(data);
+        timeout(data);
       } else {
         trackCustomEvent({
           category: "Newsletter",
