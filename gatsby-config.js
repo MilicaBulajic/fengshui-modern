@@ -157,6 +157,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
           endpoint: process.env.MAILCHIMP_ENDPOINT,// string; add your MC list endpoint here; see instructions below
+          timeout: 3500,
       },
   },
   ],

@@ -1,61 +1,55 @@
-import React, { useState } from 'react';
-import addToMailchimp from 'gatsby-plugin-mailchimp';
+import React from "react";
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
-
-
-function SubscribeForm() {
-  const [email, setEmail] = useState('');
-  const [FNAME, setName] = useState('');
-  const [status, setStatus] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = async event => {
-    event.preventDefault();
-    // Mailchimp always responds with status code 200, accompanied by a string indicating the result of the response.
-    const { result, msg } = await addToMailchimp(email, FNAME);
-    result === 'success' && setEmail('');
-    // Removes the HTML returned in some response messages in case of error
-    setMessage(msg.split('<')[0]);
-    setStatus(result);
+export default class SubscribeForm extends React.Component {
+  state = {
+    email: "",
+    name: "",
+    message: "",
   };
 
-  const handleNameChange = event => setName(event.target.value);
+  handleSubmit = async (e) => {
+    e.preventDefault();
+    const result = await addToMailchimp(this.state.email, {
+      FNAME: this.state.name});
+    this.setState({ message: result.msg });
+  };
 
-  const handleEmailChange = event => setEmail(event.target.value);
-
-  return (
-    <form>
-      <span>Subscribe for latest updates</span>
-      <p>
-        Sign Up for our newsletter and get notified when we publish new articles
-        for free!
-      </p>
-      <div>
-      <input
+  handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.setState({
+      [name]: value,
+    });
+  };
+  render() {
+    return (
+      <form
+        name="subscribeForm"
+        method="POST"
+        id="subscribe-form"
+        className="subscribe-form"
+        onSubmit={this.handleSubmit}
+      >
+        <input
           type="name"
-          onChange={handleNameChange}
-          name="FNAME"
-          placeholder="Name"
-          required
+          name="name"
+          placeholder="Enter Name"
+          value={this.state.name}
+          onChange={this.handleInputChange}
         />
         <input
           type="email"
-          onChange={handleEmailChange}
           name="email"
-          placeholder="example@domain.com"
-          required
+          placeholder="Enter Email Address..."
+          value={this.state.email}
+          onChange={this.handleInputChange}
         />
-        <span
-          status={status}
-        >
-          {message}
-        </span>
-      </div>
-      <button type="submit" onClick={handleSubmit}>
-        Subscribe
-      </button>
-    </form>
-  );
+        <button type="submit">
+          YES, PLEASE!
+        </button>
+      </form>
+    );
+  }
 }
-
-export default SubscribeForm;

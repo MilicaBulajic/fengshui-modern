@@ -1,7 +1,7 @@
 ---
 id: "01"
 title: "Feng Shui & Modern Design"
-description: Download Booklet of serives + Free Feng Shui tips for a happy life!
+description: 
 templateKey: home
 tags:
   - web
