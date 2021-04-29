@@ -1,55 +1,61 @@
-import React from "react";
-import addToMailchimp from 'gatsby-plugin-mailchimp'
+import React, { useState } from 'react';
+import addToMailchimp from "gatsby-plugin-mailchimp";
+import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 
-export default class SubscribeForm extends React.Component {
-  state = {
-    email: "",
-    name: "",
-    message: "",
-  };
+function SubscribeForm() {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-  handleSubmit = async (e) => {
-    e.preventDefault();
-    const result = await addToMailchimp(this.state.email, {
-      FNAME: this.state.name});
-    this.setState({ message: result.msg });
-  };
-
-  handleInputChange = (event) => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-    this.setState({
-      [name]: value,
+  const handleSubmit = () => {
+    addToMailchimp(email, { FNAME: name }).then((data) => {
+      if (data.result == "error") {
+        console.log(data);
+      } else {
+        trackCustomEvent({
+          category: "Newsletter",
+          action: "Click",
+          label: `Newsletter Click`,
+        });
+        setSubmitted(true);
+      }
     });
   };
-  render() {
-    return (
-      <form
-        name="subscribeForm"
-        method="POST"
-        id="subscribe-form"
-        className="subscribe-form"
-        onSubmit={this.handleSubmit}
-      >
-        <input
-          type="name"
-          name="name"
-          placeholder="Enter Name"
-          value={this.state.name}
-          onChange={this.handleInputChange}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter Email Address..."
-          value={this.state.email}
-          onChange={this.handleInputChange}
-        />
-        <button type="submit">
-          YES, PLEASE!
-        </button>
-      </form>
-    );
-  }
-}
+
+  return (
+    <>
+      {submitted ? (
+        <div>
+          <p>Thank your for your interest in my content</p>
+          </div>
+      ) : (
+        <form>
+          <input
+            type="name"
+            name="name"
+            id="name"
+            label="name-input"
+            placeholder="Your name"
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="email"
+            name="email"
+            id="mail"
+            label="email-input"
+            placeholder="Your e-mail address"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button
+            type="button"
+            aria-label="Subscribe"
+            onClick={() => handleSubmit()}
+          >
+            YES, PLEASE!
+          </button>
+        </form>
+      )}
+    </>
+  );
+};
+export default SubscribeForm;
