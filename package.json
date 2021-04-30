@@ -44,6 +44,7 @@
     "gatsby-remark-images": "^4.0.0",
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-filesystem": "^3.0.0",
+    "gatsby-source-instagram": "^0.9.0",
     "gatsby-transformer-javascript-frontmatter": "^3.0.0",
     "gatsby-transformer-json": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",

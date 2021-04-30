@@ -13,6 +13,7 @@ import FollowUs from "../components/FollowUs";
 import SubscribeForm from "../components/SubscribeForm";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { navigate } from "gatsby";
+import Instagram from "../components/Instagram";
 
 const HomePageTemplate = ({
   image,
@@ -126,6 +127,7 @@ const HomePageTemplate = ({
       </section>
       <section>
         <FollowUs />
+        <Instagram />
       </section>
     </div>
   );
