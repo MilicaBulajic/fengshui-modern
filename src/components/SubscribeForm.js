@@ -1,62 +1,41 @@
-import React, { useState } from 'react';
-import addToMailchimp from "gatsby-plugin-mailchimp";
-import { trackCustomEvent } from "gatsby-plugin-google-analytics";
+import addToMailchimp from "gatsby-plugin-mailchimp"
+import React from "react"
 
-function SubscribeForm() {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  
-  const handleSubmit = () => {
-    addToMailchimp(email, { FNAME: name }).then((data) => {
-      if (data.result == "error") {
-        console.log(data);
-      } else {
-        trackCustomEvent({
-          category: "Newsletter",
-          action: "Click",
-          label: `Newsletter Click`,
-        });
-        setSubmitted(true);
-      }
-    });
-  };
-
-  return (
-    <>
-      {submitted ? (
-        <div>
-          <p>Thank your for your interest in my content</p>
-          </div>
-      ) : (
-        <form>
-          <input
-            type="name"
-            name="name"
-            id="name"
-            label="name-input"
-            placeholder="Your name"
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="email"
-            name="email"
-            id="mail"
-            label="email-input"
-            placeholder="Your e-mail address"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <button
-            type="button"
-            aria-label="Subscribe"
-            onClick={() => handleSubmit()}
-          >
-            YES, PLEASE!
-          </button>
-        </form>
-      )}
-    </>
-  );
-};
-export default SubscribeForm;
+export default class SubscribeForm extends React.Component {
+  constructor() {
+    super()
+    this.state = { email: "", result: null }
+  }
+  _handleSubmit = async e => {
+    e.preventDefault()
+    const result = await addToMailchimp(this.state.email)
+    this.setState({result: result})
+  }
+handleChange = event => {
+    this.setState({ email: event.target.value })
+  }
+render() {
+    return (
+      <form onSubmit={this._handleSubmit}>
+        <input
+          id="outlined-email-input"
+          label="Email"
+          type="email"
+          name="email"
+          autoComplete="email"
+          variant="outlined"
+          onChange={this.handleChange}
+        />
+        <br />
+        <button
+          variant="contained"
+          color="primary"
+          label="Submit"
+          type="submit"
+        >
+          YES, PLEASE!
+        </button>
+      </form>
+    )
+  }
+}
