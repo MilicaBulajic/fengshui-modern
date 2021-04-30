@@ -1,25 +1,54 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
+import Image from 'gatsby-image';
 
-const url =
-  'https://www.instagram.com/graphql/query/?query_hash=42323d64886122307be10013ad2dcc44&variables={"id":8675410194,"first":6}';
+const Instagram = () => (
+  <StaticQuery
+    query={graphql`
+      query InstagramPosts {
+        allInstagramContent(limit: 4) {
+          edges {
+            node {
+              permalink
+                localImage {
+                  childImageSharp {
+                    fluid(maxHeight: 500, maxWidth: 500 quality: 50) {
+                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={(data) => (
+      <div style={{
+        marginBottom: '1rem',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)',
+      }}>
+        {
+          data.allInstagramContent.edges.map((item, i) => (
+            item.node.localImage ? (
 
+              <div key={i}>
+                <a
+                  href={item.node.permalink}
+                  target='_blank'
+                  rel='noopener'
+                >
+                  <Image
+                    fluid={item.node.localImage.childImageSharp.fluid}
+                  />
+                </a>
+              </div>
+            ) : (<div></div>)
+          ))
+        }
+      </div>
+    )}
+  />
+);
 
-  const Instagram = () => {
-  const [insta, setInsta] = useState([]);
-  useEffect(() => {
-    fetch(url)
-      .then((data) => data.json())
-      .then((data) => {
-        const photosArray = data.data.user.edge_owner_to_timeline_media.edges;
-        setInsta(photosArray);
-      });
-  }, []);
-  return (
-    <div>
-      {insta.map((photo) => (
-        <img src={photo.node.display_url} key={photo.node.id} />
-      ))}
-    </div>
-  );
-};
-export default Instagram;
+export default Instagram; 
