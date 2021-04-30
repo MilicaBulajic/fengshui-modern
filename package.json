@@ -19,6 +19,7 @@
     "classnames": "^2.2.6",
     "css-loader": "^5.0.0",
     "dependencies": "^0.0.1",
+    "formik": "^2.2.6",
     "gatsby": "^3.0.0",
     "gatsby-cli": "^3.0.0",
     "gatsby-image": "^3.0.0",

@@ -1,47 +1,44 @@
-import React, { useState } from 'react';
-import addToMailchimp from 'gatsby-plugin-mailchimp';
+import React from "react"
+import addToMailchimp from "gatsby-plugin-mailchimp"
+import { useFormik } from "formik"
 
-function SubscribeForm() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = async event => {
-    event.preventDefault();
-   
-    const { result, msg } = await addToMailchimp(email);
-    result === 'success' && setEmail('');
-
-    setMessage(msg.split('<')[0]);
-    setStatus(result);
-  };
-
-  const handleChange = event => setEmail(event.target.value);
-
+const SubscribeForm = () => {
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      firstName: "",
+    },
+    onSubmit: values => {
+      addToMailchimp(values.email, {FNAME: values.firstName})
+      .then(data => {
+        if (data.result === "error") {
+            alert("error: likely a duplicate email");
+        } else {
+            alert("success")
+      }})
+    },
+  })
   return (
-    <form>
-      <p>
-        Download Booklet of serive + Free Feng Shui tips for a happy life!
-      </p>
-      <div>
-        <input
-          type="email"
-          onChange={handleChange}
-          value={email}
-          placeholder="Email"
-          required
-        />
-        <span
-          status={status}
-        >
-          {message}
-        </span>
-      </div>
-      <button type="submit" onClick={handleSubmit}>
-        YES, PLEASE!
-      </button>
+    <form onSubmit={formik.handleSubmit}>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="email"
+        onChange={formik.handleChange}
+        value={formik.values.email}
+      />
+      <input
+        id="firstName"
+        name="firstName"
+        type="text"
+        placeholder="name"
+        onChange={formik.handleChange}
+        value={formik.values.firstName}
+      />
+      <button type="submit">YES, PLEASE!</button>
     </form>
-  );
+  )
 }
 
-export default SubscribeForm;
+export default SubscribeForm
