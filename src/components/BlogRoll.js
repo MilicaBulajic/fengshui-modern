@@ -110,7 +110,7 @@ export default (langKey) => (
           }
         }
       }
-      it: allMarkdownRemark(
+      sr: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] },
         filter: { frontmatter: { templateKey: { eq: "blog-post" },
                                  lang: { regex: "/(sr|any)/" }}}

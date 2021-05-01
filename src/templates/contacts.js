@@ -23,7 +23,7 @@ function setActionPath(langKey) {
   if(langKey==='en'){
     path = '/en/';
   }else{
-    path = '/sr/';
+    path = '/en/';
   }
   return path;
 }
