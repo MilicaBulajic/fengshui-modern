@@ -1,4 +1,5 @@
 import addToMailchimp from "gatsby-plugin-mailchimp";
+import { FormattedMessage } from 'react-intl';
 import { navigate } from "gatsby-link";
 import React from "react";
 
@@ -19,7 +20,7 @@ export default class MailChimpForm extends React.Component {
       FNAME: this.state.name,
     }) 
     const form = e.target;
-    fetch("/?no-cache=1", {
+    fetch({
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
@@ -40,7 +41,16 @@ export default class MailChimpForm extends React.Component {
 
   render() {
   return (
-    <form onSubmit={this._handleSubmit} action="/">
+    <>
+    <h4 className="subtitle"><FormattedMessage id="contact.fill-the-form"/></h4>
+    <form 
+      name="subscribe"
+      method="post"
+      action="/"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      onSubmit={this._handleSubmit} 
+      >
       <input
         id="outlined-name-input"
         placeholder="Name"
@@ -69,6 +79,7 @@ export default class MailChimpForm extends React.Component {
         YES PLEASE!
       </button>
     </form>
+    </>
   );
 }
 }
