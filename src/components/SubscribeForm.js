@@ -41,7 +41,7 @@ export default class SubscribeForm extends React.Component {
             <div>
                 <div>
                 <p>Download Booklet of serive + Free Feng Shui tips for a happy live!</p>
-                    <form onSubmit={this._handleSubmit}>
+                    <form method="post" onSubmit={this._handleSubmit}>
                         <input
                             type="text"
                             onChange={this._handleChange}
