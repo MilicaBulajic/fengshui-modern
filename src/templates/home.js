@@ -43,7 +43,7 @@ const HomePageTemplate = ({
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
           backgroundPosition: `top left`,
-          height: `700px`,
+          height: `520px`,
         }}
       >
         <div className="cover-text animated bounceInRight">

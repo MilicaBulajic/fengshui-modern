@@ -231,7 +231,7 @@ export const pageQuery = graphql`query ContactPageQuery($id: String!) {
       lang
       image {
         childImageSharp {
-          gatsbyImageData(quality: 160, layout: FULL_WIDTH)
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
         }
       }
       address
