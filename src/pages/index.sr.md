@@ -25,7 +25,7 @@ testimonials:
   - author: Milica Bulajic
     quote: >-
       I’m glad I decided to work with you. It’s really great how easy youre and manage. I never have any problem at all.
-    image: /img/test1.jpg
+    image: /img/test1.png
     alt: vddfgdf
   - author: Milica Bulajic
     quote: >-

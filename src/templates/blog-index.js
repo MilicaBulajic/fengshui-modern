@@ -22,7 +22,7 @@ export default class BlogIndexPage extends React.Component {
                 style={{
                   backgroundImage: `url(${blog})`,
                   backgroundPosition: 'right',
-                  height: `350px`,
+                  height: `760px`,
                 }}
               >
                 <h1

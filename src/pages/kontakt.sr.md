@@ -8,14 +8,14 @@ tags:
 lang: sr
 image: /img/PersimmonHD.jpg
 date: "08-03-2019"
-address: "Piazza Unità d'Italia, 34121 Trieste TS"
+address: "Malta"
 phone: '+123456789'
 email: 'fengshui.home.89@gmail.com'
 linkinsta: 'fengshui.home'
 instagram: '@fengshui.home'
 locations:
-   lat: 45.6500779
-   lng: 13.7677618
+   lat: 35.917973
+   lng: 14.409943
    message: ''
 imageCardSL:
   alt: "immagine"

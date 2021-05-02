@@ -39,7 +39,7 @@ export default class SubscribeForm extends React.Component {
     render() {
         return (
             <div>
-                <div>
+                <div className="form">
                 <p>Download Booklet of serive + Free Feng Shui tips for a happy live!</p>
                     <form method="post" onSubmit={this._handleSubmit}>
                         <input
@@ -54,7 +54,7 @@ export default class SubscribeForm extends React.Component {
                             placeholder="email"
                             name="email"
                         />
-                        <input type="submit" value="YES, PLEASE!" />
+                        <button type="submit">YES, PLEASE!</button>
                     </form>
                 </div>
             </div>

@@ -2,6 +2,8 @@
 id: "01"
 title: "Feng Shui & Modern Design"
 description: 
+linkinsta: 'fengshui.home'
+instagram: '@fengshui.home'
 templateKey: home
 tags:
   - web
@@ -24,8 +26,8 @@ main:
 testimonials:
   - author: Milica Bulajic
     quote: >-
-      I’m glad I decided to work with you. It’s really great how easy youre and manage. I never have any problem at all.
-    image: /img/test1.jpg
+      I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad I decided to work with you.
+    image: /img/test1.png
     alt: vddfgdf
   - author: Milica Bulajic
     quote: >-
@@ -40,6 +42,11 @@ testimonials:
   - author: Suza
     quote: >-
       Working with Tijana and Andrew, is working with glamour, responsibility, and commitment.
+    image: /img/128x128.png
+    alt: vddfgdf
+  - author: Suza
+    quote: >-
+      Lorem ipsum, or lipsum as it is sometimes known, web designs.
     image: /img/128x128.png
     alt: vddfgdf
   - author: Suza
@@ -70,4 +77,4 @@ Feng Shui helps you easily remove unwanted things from your life. It supports yo
 
 Love yourself enough to live the life of your dreams. You deserve it! With the good energy flow of your home and desire in your heart, you can achieve anything. We are happy to help you!
 
-Ready for the CHANGE?  
+<b>Ready to CHANGE YOUR LIFE?</b>

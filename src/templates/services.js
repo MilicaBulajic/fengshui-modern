@@ -30,7 +30,7 @@ const ServiceTemplate = ({
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         backgroundPosition: `top`,
-        height: `550px`,
+        height: `720px`,
       }}
     >
       <h1

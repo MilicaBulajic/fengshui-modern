@@ -14,42 +14,49 @@ slug: /en/services/
 intro:
   blurbs:
     - image: /img/1.jpg
-      heading: TRANSFORM AND CREATE THE LIFE YOU DESIRE
+      heading: TRANSFORM YOUR HOME = TRANSFORM AND CREATE THE LIFE YOU DESIRE 
       link: /en/services/
       text: >
-        in this section we map out the 9 zones of your house each one of which represents a particular area of your life (health, wealth, relationships, etc.), to intentionally align the energy of the space with the life you want to live.
+        Full Home Consultation Package
+        We transform the energy of your home and create the new energy for your desired life to manifest.
     - image: /img/2.jpg
-      heading: TRANSFORM AND CREATE THE LIFE YOU DESIRE WITH MODERN DESIGN
+      heading: TRANSFORM YOUR HOME WITH MODERN DESIGN = TRANSFORM AND CREATE THE LIFE YOU DESIRE
       link: /en/services/
       text: >
-        this is an astrological chart which uses time, space and objects to analyse positive and negative areas of the house and to heal/balance the energy. This includes analysing health, wealth, relationships, etc. of inhabitants. Please note that for the full effect of Feng Shui, a yearly update for the remedies needs to be done, since every calendar year the energy of the house changes.
+        Full Home Consultation Package + Design suggestion.
+        We transform the energy of your home with a style and modern design and create the new energy for your desired life to manifest.   
     - image: /img/3.jpg
       heading: CREATE THE LIFE YOU DESIRE WITH YOUR HOUSE
       link: /en/services/
       text: >
-        in this section we map out the 9 zones of your house each one of which represents a particular area of your life (health, wealth, relationships, etc.), to intentionally align the energy of the space with the life you want to live.
+        Intentional Feng Shui 
+        We intentionally align your home with the energy of your desire and create the space for your desires to manifest.
     - image: /img/4.jpg
       heading: HEAL/IMPORVE YOUR HOME = HEAL/IMPROVE YOUR LIFE
       link: /en/services/
       text: >
-        this is the report determining remedies derived from what is calculated in the Flying stars worksheet, which suggest the elements to use and ways how to balance the energy in every area of the house.
+        Unlock your happiness and protect from bad luck
+        This is an Energy map of the house which we can read to enhance the good energy and heal and suppress the bad energy of the house.
     - image: /img/5.jpg
-      heading: HOW YOUR ENVIRONMENT SUPPORTS YOU TO HAVE SUCCESS
+      heading: HOW YOUR ENVIRONMENT SUPPORTS YOU TO HAVE SUCCESS IN EVERYTHING
       link: /en/services/
       text: >
-        this is based on your date of birth and gender and it is used to show your compatibility with building space, e.g. your most supportive directions for sleeping, working, etc; for all residents of your home (to a max. of 6 people)
+        Personal Feng Shui
+        We calculate which areas of the house are the best for you, so that it will support you and bring luck in everything that you are doing.
     - image: /img/6.jpg
-      heading: MANIFEST YOUR DESIRE WITH FENG SHUI
+      heading: MANIFEST YOUR DESIRE WITH FENG SHUI 
       link: /en/services/
       text: >
-        this is the report determining remedies derived from what is calculated in the Flying stars worksheet, which suggest the elements to use and ways how to balance the energy in every area of the house.
+        What exactly you want to manifest or improve in your life
+        We will give you feng shui enhancement for it and create the space and energy for your desire to manifest. 
 ---
 
 ##
-Do you know that with a good Feng Shui you can love your home and your life?With a right organization of the space, we create an energy balance of your home that will reflect on your outside world as well. Good energy flow will positively affect your environment and your life and support you or bring changes in every field!
+Do you know that with a good Feng Shui you can love your home and your life? With a right organization of the space, we create an energy balance of your home that will reflect on your outside world as well. Good energy flow will positively affect your environment and your life and support you or bring changes in every field!
 
 
 <b>We help you design your home with style and good Feng Shui</b>, which will energetically support you in life, where you will first of all feel wonderful. We help you create balanced and harmonious energy, through the right choice of colors, decorations, furniture, lighting, materials…
 
 
 <b>Make your home a happy and warm place where you love to be in!</b>
+HOME CONSULTATION SERVICES WE OFFER

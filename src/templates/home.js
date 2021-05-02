@@ -18,6 +18,8 @@ import Instagram from "../components/Instagram";
 const HomePageTemplate = ({
   image,
   images,
+  linkinsta,
+  instagram,
   heading,
   mainpitch,
   main,
@@ -41,12 +43,13 @@ const HomePageTemplate = ({
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
           backgroundPosition: `top left`,
-          height: `520px`,
+          height: `700px`,
         }}
       >
         <div className="cover-text animated bounceInRight">
           <h2 className="is-size-5-mobile animated bounceInRight">{heading}</h2>
           <h1 className="is-size-5-mobile animated bounceInRight">{title}</h1>
+          <div className="buttons">
           <button
             onClick={() => {
               navigate("about");
@@ -59,8 +62,9 @@ const HomePageTemplate = ({
               navigate("services");
             }}
           >
-            CHOSE YOUR PACKAGE
+            SERVICES
           </button>
+          </div>
         </div>
       </div>
       <section className="section full-width-text">
@@ -97,7 +101,7 @@ const HomePageTemplate = ({
                         navigate("services");
                       }}
                     >
-                      CHOSE YOUR PACKAGE
+                      YES, PLEASE!
                     </button>
                   </article>
                 </div>
@@ -126,7 +130,7 @@ const HomePageTemplate = ({
         </div>
       </section>
       <section>
-        <FollowUs />
+        <FollowUs link={linkinsta} instagram={instagram} />
         <Instagram />
       </section>
     </div>
@@ -159,6 +163,8 @@ class HomePage extends React.Component {
     const { frontmatter } = data.markdownRemark;
     const image = frontmatter.image.childImageSharp.fluid.src;
     const tags = frontmatter.tags;
+    const linkinsta = dataMarkdown.frontmatter.linkinsta;
+    const instagram = dataMarkdown.frontmatter.instagram;
     const images = frontmatter.images;
 
     return (
@@ -224,6 +230,8 @@ export const pageQuery = graphql`
         id
         title
         description
+        linkinsta
+        instagram
         tags
         lang
         image {
@@ -268,7 +276,7 @@ export const pageQuery = graphql`
           alt
           image {
             childImageSharp {
-              gatsbyImageData(width: 130, quality: 64, layout: CONSTRAINED)
+              gatsbyImageData(width: 105, quality: 64, layout: CONSTRAINED)
             }
           }
         }

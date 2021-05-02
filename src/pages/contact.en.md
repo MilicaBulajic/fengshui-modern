@@ -8,21 +8,21 @@ tags:
 lang: en
 image: /img/PersimmonHD.jpg
 date: "08-03-2019"
-address: "Piazza Unità d'Italia, 34121 Trieste TS"
+address: "Malta"
 phone: '+123456789'
 email: 'fengshui.home.89@gmail.com'
 linkinsta: 'fengshui.home'
 instagram: '@fengshui.home'
 locations:
-   lat: 45.6500779
-   lng: 13.7677618
+   lat: 35.917973
+   lng: 14.409943
    message: ''
 imageCardSL:
   alt: "immagine"
-  image: /img/128x128.png
+  image: /img/circle.png
   name: Tijana and Andrew
-  description: We are Feng Shui specialists, follow us in this adventure!
-  website: website
+  description: We are Feng Shui consultant and Architects. We are happy to help you!
+  website:   
 path: /en/contact
 slug: /en/contact
 ---
