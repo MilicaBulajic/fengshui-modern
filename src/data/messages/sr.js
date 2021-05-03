@@ -33,7 +33,7 @@ module.exports = {
   'experimental': 'Experimental',
   'blog': 'Blog',
   'blog-message': 'Novosti',
-  'keep-reading': 'Continua a leggere →',
+  'keep-reading': 'Keep reading →',
   'followus': 'Pratite: ',
   'info-sheet': 'Scheda informativa',
   'info-sheet-title': 'Titolo: ',

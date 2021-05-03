@@ -26,9 +26,14 @@
       "sr": "servisi"
     },
     {
+      "id": "06",
+      "en": "good-fengshui",
+      "sr": "good-fengshui"
+    },
+    {
       "id": "07",
-      "en": "2019-02-01-my-first-gatsby-blog-post",
-      "sr": "2019-02-01-mio-primo-blog-post-gatsby"
+      "en": "well-being",
+      "sr": "well-being"
     },
     {
       "id": "13",
