@@ -9,11 +9,7 @@ path: /en/good-fengshui/
 slug: /en/blog/
 intro_paragraph: ""
 tags:
-  - "#fengshui #fengshuilifestyle #fengshuitips #fengshuiconsultant #love
-    #service #fengshuiarchitecture #fengshuidesign #fengshuimoderndesign
-    #balance #family #homedecor #homeimprovement #homedesign #interiordesign
-    #home #happiness #happylife #improveyourlife #goodfengshui #goodenergy
-    #goodlife #fengshuihome"
+  - fengshui fengshuilifestyle fengshuitips fengshuiconsultant
 image: /img/PersimmonHD.jpg
 ---
 💛 When the energy in the space is balanced and created to suit you, the whole family thrives and feels great! 💛\
