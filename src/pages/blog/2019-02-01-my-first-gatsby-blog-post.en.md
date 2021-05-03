@@ -5,7 +5,7 @@ title: Ways how to keep your peace and well-being
 date: 2021-05-01T11:52:00.000Z
 description: "    "
 lang: en
-path: /en/blog/2021-05-01-well-being
+path: /en/blog/well-being
 slug: /en/blog/2019-02-01-my-first-gatsby-blog-post
 intro_paragraph: 🌱Make a time for yourself, because your five minutes will change your life.🌱
 tags:
