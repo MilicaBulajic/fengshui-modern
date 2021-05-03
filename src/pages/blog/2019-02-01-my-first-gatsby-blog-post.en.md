@@ -9,15 +9,8 @@ path: /en/blog/well-being
 slug: /en/blog/2019-02-01-my-first-gatsby-blog-post
 intro_paragraph: 🌱Make a time for yourself, because your five minutes will change your life.🌱
 tags:
-  - "#fengshui #fengshuilifestyle #fengshuitips #fengshuiconsultant #love
-    #service #fengshuiarchitecture #fengshuidesign #fengshuimoderndesign
-    #balance #family #homedecor #homeimprovement #homedesign #interiordesign
-    #home #happiness #happylife #improveyourlife #goodfengshui #goodenergy
-    #goodlife #fengshuihomea#fengshui #fengshuilifestyle #fengshuitips
-    #fengshuiconsultant #love #service #fengshuiarchitecture #fengshuidesign
-    #fengshuimoderndesign #balance #family #homedecor #homeimprovement
-    #homedesign #interiordesign #home #happiness #happylife #improveyourlife
-    #goodfengshui #goodenergy #goodlife #fengshuihomefeng-shui"
+  - fengshui fengshuilifestyle fengshuitips fengshuiconsultant
+    fengshuiarchitecture
 image: /img/PersimmonHD.jpg
 ---
 Some ways how to keep your peace and well-being:
