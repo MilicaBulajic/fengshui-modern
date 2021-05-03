@@ -3,8 +3,8 @@ import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 export default class SubscribeForm extends React.Component {
     state = {
-        name: null,
-        email: null,
+        FNAME: null,
+        EMAIL: null,
     }
 
     _handleChange = e => {
@@ -21,7 +21,9 @@ export default class SubscribeForm extends React.Component {
 
         console.log('submit', this.state)
 
-        addToMailchimp(this.state.email, this.state)
+        addToMailchimp(this.state.EMAIL, {
+            ...this.state
+        })
             .then(({ msg, result }) => {
                 console.log('msg', `${result}: ${msg}`)
 
@@ -40,19 +42,19 @@ export default class SubscribeForm extends React.Component {
         return (
             <div>
                 <div className="form">
-                <p>Download Booklet of serive + Free Feng Shui tips for a happy live!</p>
+                <p>Download Booklet of serive + Free Feng Shui tips for a happy life!</p>
                     <form method="post" onSubmit={this._handleSubmit}>
                         <input
                             type="text"
                             onChange={this._handleChange}
                             placeholder="name"
-                            name="name"
+                            name="FNAME"
                         />
                         <input
                             type="email"
                             onChange={this._handleChange}
                             placeholder="email"
-                            name="email"
+                            name="EMAIL"
                         />
                         <button type="submit">YES, PLEASE!</button>
                     </form>
