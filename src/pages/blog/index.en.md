@@ -1,11 +1,11 @@
 ---
-id: "02"
+id: 6
 templateKey: blog-index
 title: Good Feng Shui * Good Energy * Good Life
 date: 2021-05-04T22:00:00.000Z
 description: "   "
 lang: en
-path: /en/blog/
+path: /en/good-fengshui/
 slug: /en/blog/
 intro_paragraph: ""
 tags:
