@@ -7027,6 +7027,17 @@ gatsby-page-utils@^1.4.0:
     lodash "^4.17.21"
     micromatch "^4.0.2"
 
+gatsby-plugin-gatsby-cloud@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.4.1.tgz#e2c5aba4af92c850c3206578f2b1a5730e6c9364"
+  integrity sha512-6qzFTApuu9S85WxMeGTy5eOzPGWdP1EM6wXWG6zi24GkFqVqrhXsD3YF21k0KVDN7A/AR01nHQFCsTvY/BQ4/w==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    fs-extra "^8.1.0"
+    kebab-hash "^0.1.2"
+    lodash "^4.17.21"
+    webpack-assets-manifest "^5.0.1"
+
 gatsby-plugin-google-analytics@^3.0.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.4.0.tgz#4630d0d8f2f37806be50de9bb3e120f4045150d1"
@@ -17080,7 +17091,7 @@ web-namespaces@^1.0.0, web-namespaces@^1.1.2:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"
   integrity sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==
 
-webpack-assets-manifest@^5.0.5:
+webpack-assets-manifest@^5.0.1, webpack-assets-manifest@^5.0.5:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/webpack-assets-manifest/-/webpack-assets-manifest-5.0.6.tgz#1fe7baf9b57f2d28ff09fcaef3d678cc15912b88"
   integrity sha512-CW94ylPHurZTmxnYajSFA8763Cv/QFIKNgBwqBLaIOnBjH1EbDUAf8Eq1/i+o8qaKyKXJ3aX7r4/jtpXD88ldg==

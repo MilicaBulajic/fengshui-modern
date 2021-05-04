@@ -158,6 +158,7 @@ module.exports = {
     options: {
       access_token: process.env.INSTAGRAM_TOKEN
     }
-  }
+  },
+  `gatsby-plugin-gatsby-cloud`,
   ],
 }

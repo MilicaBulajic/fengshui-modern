@@ -48,7 +48,7 @@ class CardSlide extends React.Component {
         <div className="card-content">
           <div className="media">
             <div className="media-left">
-              <figure className="image is-128x128">
+              <figure className="image">
                 <CardImageSlide imageInfo={imageInfo}/>
               </figure>
             </div>
