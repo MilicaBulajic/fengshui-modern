@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect} from 'react';
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import InputField from "./InputField";
@@ -36,25 +35,21 @@ const CustomForm = ({ status, message, onValidated }) => {
             className="form"
             onSubmit={(e) => handleSubmit(e)}
         >
-            <p className="mc__title">
+            <p>
                 {status === "success" ? "Success!" :
                     "Download Booklet of serive + Free Feng Shui tips for a happy life!"}
             </p>
 
             {status === "sending" && (
-                <div
-                    className="mc__alert mc__alert--sending"
-                >sending...</div>
+                <div>sending...</div>
             )}
             {status === "error" && (
                 <div
-                    className="mc__alert mc__alert--error"
                     dangerouslySetInnerHTML={{ __html: message }}
                 />
             )}
             {status === "success" && (
                 <div
-                    className="mc__alert mc__alert--success"
                     dangerouslySetInnerHTML={{ __html: message }}
                 />
             )}
@@ -67,6 +62,7 @@ const CustomForm = ({ status, message, onValidated }) => {
                         value={firstName}
                         placeholder="Name"
                         isRequired
+                        className="inputs"
                     />
                     <InputField
                         onChangeHandler={setEmail}
@@ -74,23 +70,17 @@ const CustomForm = ({ status, message, onValidated }) => {
                         value={email}
                         placeholder="your@email.com"
                         isRequired
+                        className="inputs"
                     />
 
                 </div>
             ) : null}
 
-            {/*Close button appears if form was successfully sent*/}
             {
-                status === 'success' ? <InputField
-                label="subscribe"
-                type="submit"
-                formValues={[email, firstName]}
-            /> : <InputField
-                    label="YES, PLEASE!"
+                status === 'success' ? null : <button
                     type="submit"
                     formValues={[email, firstName]}
-                    className="form button"
-                />
+                >YES, PLEASE!</button>
 
             }
         </form>
