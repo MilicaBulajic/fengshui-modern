@@ -153,12 +153,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-offline`,
-    {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-          endpoint: process.env.MAILCHIMP_ENDPOINT,// string; add your MC list endpoint here; see instructions below
-      },
-  },
   {
     resolve: `gatsby-source-instagram-all`,
     options: {

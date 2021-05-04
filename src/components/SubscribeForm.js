@@ -1,65 +1,121 @@
-import React from 'react'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
 
-export default class SubscribeForm extends React.Component {
-    state = {
-        FNAME: null,
-        EMAIL: null,
+import React, {useState, useEffect} from 'react';
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+import InputField from "./InputField";
+
+
+const CustomForm = ({ status, message, onValidated }) => {
+    const [email, setEmail] = useState('');
+    const [firstName, setFirstName] = useState('');
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        email &&
+        firstName &&
+        email.indexOf("@") > -1 &&
+        onValidated({
+            EMAIL: email,
+            MERGE1: firstName,
+        });
+
     }
 
-    _handleChange = e => {
-        console.log({
-            [`${e.target.name}`]: e.target.value,
-        })
-        this.setState({
-            [`${e.target.name}`]: e.target.value,
-        })
+    useEffect(() => {
+        if(status === "success") clearFields();
+    }, [status])
+
+    const clearFields = () => {
+        setFirstName('');
+        setEmail('');
     }
 
-    _handleSubmit = e => {
-        e.preventDefault()
+ 
+    return (
+        <form
+            className="form"
+            onSubmit={(e) => handleSubmit(e)}
+        >
+            <p className="mc__title">
+                {status === "success" ? "Success!" :
+                    "Download Booklet of serive + Free Feng Shui tips for a happy life!"}
+            </p>
 
-        console.log('submit', this.state)
+            {status === "sending" && (
+                <div
+                    className="mc__alert mc__alert--sending"
+                >sending...</div>
+            )}
+            {status === "error" && (
+                <div
+                    className="mc__alert mc__alert--error"
+                    dangerouslySetInnerHTML={{ __html: message }}
+                />
+            )}
+            {status === "success" && (
+                <div
+                    className="mc__alert mc__alert--success"
+                    dangerouslySetInnerHTML={{ __html: message }}
+                />
+            )}
 
-        addToMailchimp(this.state.EMAIL, {
-            ...this.state
-        })
-            .then(({ msg, result }) => {
-                console.log('msg', `${result}: ${msg}`)
-
-                if (result !== 'success') {
-                    throw msg
-                }
-                alert(msg)
-            })
-            .catch(err => {
-                console.log('err', err)
-                alert(err)
-            })
-    }
-
-    render() {
-        return (
-            <div>
+            {status !== "success" ? (
                 <div className="form">
-                <p>Download Booklet of serive + Free Feng Shui tips for a happy life!</p>
-                    <form method="post" onSubmit={this._handleSubmit}>
-                        <input
-                            type="text"
-                            onChange={this._handleChange}
-                            placeholder="name"
-                            name="FNAME"
-                        />
-                        <input
-                            type="email"
-                            onChange={this._handleChange}
-                            placeholder="email"
-                            name="EMAIL"
-                        />
-                        <button type="submit">YES, PLEASE!</button>
-                    </form>
+                    <InputField
+                        onChangeHandler={setFirstName}
+                        type="text"
+                        value={firstName}
+                        placeholder="Name"
+                        isRequired
+                    />
+                    <InputField
+                        onChangeHandler={setEmail}
+                        type="email"
+                        value={email}
+                        placeholder="your@email.com"
+                        isRequired
+                    />
+
                 </div>
-            </div>
-        )
-    }
+            ) : null}
+
+            {/*Close button appears if form was successfully sent*/}
+            {
+                status === 'success' ? <InputField
+                label="subscribe"
+                type="submit"
+                formValues={[email, firstName]}
+            /> : <InputField
+                    label="YES, PLEASE!"
+                    type="submit"
+                    formValues={[email, firstName]}
+                    className="form button"
+                />
+
+            }
+        </form>
+    );
+};
+
+const SubscribeForm = props => {
+    const url = `https://genhybridsystems.us1.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`;
+
+    return (
+
+        <div className="mc__form-container">
+            <MailchimpSubscribe
+                url={url}
+                render={({ subscribe, status, message }) => (
+                    <CustomForm
+                        status={status}
+                        message={message}
+                        onValidated={formData => subscribe(formData)}
+                    />
+                )}
+            />
+        </div>
+
+    )
 }
+
+export default SubscribeForm;
