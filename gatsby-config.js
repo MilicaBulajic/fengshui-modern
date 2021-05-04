@@ -158,23 +158,6 @@ module.exports = {
     options: {
       access_token: process.env.INSTAGRAM_TOKEN
     }
-  },
-  {
-    resolve: `gatsby-transformer-remark`,
-    options: {
-      plugins: [
-        {
-          resolve: `gatsby-remark-embed-snippet`,
-          options: {
-            directory: `${__dirname}`
-          }
-        },
-        {
-          resolve: `gatsby-remark-prismjs`,
-          options: {},
-        },
-      ],
-    },
-  },
+  }
   ],
 }
