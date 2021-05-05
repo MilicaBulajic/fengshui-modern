@@ -37,16 +37,15 @@ const HomePageTemplate = ({
   return (
     <div>
       <div
-        className="full-width-image margin-top-0"
+        className="full-width-image margin-top-0 home-mob"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
-          backgroundPosition: `top left`,
-          height: `520px`,
+          height: `780px`,
         }}
       >
-        <div className="cover-text animated bounceInRight">
+        <div className="cover-text animated is-size-5-mobile bounceInRight">
           <h2 className="is-size-5-mobile animated bounceInRight">{heading}</h2>
           <h1 className="is-size-5-mobile animated bounceInRight">{title}</h1>
           <div className="buttons">
@@ -130,8 +129,6 @@ const HomePageTemplate = ({
         </div>
       </section>
       <section>
-        <FollowUs link={linkinsta} instagram={instagram} />
-        <Instagram />
       </section>
     </div>
   );
@@ -192,6 +189,8 @@ class HomePage extends React.Component {
             testimonials={dataMarkdown.frontmatter.testimonials}
           />
         </div>
+        <FollowUs link={linkinsta} instagram={instagram}/>
+        <Instagram />
       </Layout>
     );
   }

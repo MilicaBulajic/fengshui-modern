@@ -18,6 +18,9 @@ $body-color: #555555
 $facebook-color: #555555
 $instagram-color: #555555
 
+a.link
+  color: #c7a677
+
 h3:before
     content: ""
     display: inline-block
@@ -44,7 +47,7 @@ h3:after
   background-color: $feng-invert
 
 .navbar .navbar-menu
-  box-shadow:none 
+  box-shadow 
 
 .navbar .navbar-item:hover
  color: #c7a677
@@ -503,30 +506,34 @@ div.packages
 
 @media only screen and (max-width: 600px) 
 
-  .full-width-image
-    background-image: url("/img/mobilehome.jpg")
+  .home-mob
+    background-image: url(/img/mobilehome.jpg)!important
 
   .cover-text 
+    display: grid
     text-align: center
-    width: 65%
-    left: 15%
-    margin-top: 500px
+    width: 100%
+    margin-top: 480px
     background-color: #fff
+    left: 0
+    border-radius: 0 
 
   .cover-text button  
-    margin-left: 0
+    margin-left: 20px
+    margin-bottom: 30px
 
   .columns.mobile 
-    margin-top: 100px
+    margin-top: 130px
     
   .full-width-image img
     background-position: bottom 50px right 100px
 
-  .section .full-width-text .columns
-    margin-top: 100px 
-
   .full-width-text .second
     margin-top: 0 
+
+  .full-width-text .services-mob
+    background-image: url('/img/mobileservice.jpg')!important
+    background-position: bottom 50px right 100px
 
   .services h4.title
     position: absolute
@@ -549,6 +556,20 @@ div.packages
     text-align: center
     right: 20%
 
+  .contacts .contact
+    display: inline
+    position: absolute
+    margin-top: 200px
+  
+  .contacts .contact p 
+    margin-top: 30px
+
+  .section .box .column
+    padding-top: 55px
+    text-align: center
+
+  .contacts .content figure 
+    margin-left: 0
 
 @import "~bulma"
 

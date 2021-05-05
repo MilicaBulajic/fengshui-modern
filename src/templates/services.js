@@ -24,7 +24,7 @@ const ServiceTemplate = ({
   return (
     <div>
     <div
-      className="full-width-image margin-top-0"
+      className="full-width-image margin-top-0 services-mob"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image

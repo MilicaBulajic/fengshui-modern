@@ -21,8 +21,8 @@ export default class BlogIndexPage extends React.Component {
                 className="full-width-image-container margin-top-0"
                 style={{
                   backgroundImage: `url(${blog})`,
-                  backgroundPosition: 'right',
-                  height: `760px`,
+                  backgroundPosition: 'top',
+                  height: `770px`,
                 }}
               >
                 <h1
@@ -35,7 +35,9 @@ export default class BlogIndexPage extends React.Component {
                   <FormattedMessage id="blog-message" />
                 </h1>
               </div>
+              <div className="column is-10 is-offset-1">
             <BlogRoll />
+            </div>
         </section>
       </Layout>
     );

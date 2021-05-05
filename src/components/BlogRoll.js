@@ -63,7 +63,7 @@ class BlogRoll extends React.Component {
               </article>
             </div>
           )))}
-          </div>
+        </div>
     );
   }
 }

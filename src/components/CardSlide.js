@@ -52,7 +52,7 @@ class CardSlide extends React.Component {
                 <CardImageSlide imageInfo={imageInfo}/>
               </figure>
             </div>
-              <div className="media-content">
+              <div className="media-content contact">
                 <ReactWOW animation='pulse'>
                   <p className="title is-4">{name}</p>
                 </ReactWOW>

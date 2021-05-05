@@ -11,7 +11,7 @@ intro_paragraph: 🌱Make a time for yourself, because your five minutes will ch
 tags:
   - fengshui fengshuilifestyle fengshuitips fengshuiconsultant
     fengshuiarchitecture
-image: /img/PersimmonHD.jpg
+image: /img/Persimmon.jpg
 ---
 Some ways how to keep your peace and well-being:
 

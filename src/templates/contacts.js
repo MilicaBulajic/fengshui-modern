@@ -35,7 +35,7 @@ const ContactPageTemplate = ({
 }) => {
   const PageContent = contentComponent || Content
   return (
-      <section className="section">
+      <section className="section contacts">
         <div className="container">
           <div className="content">
       <h1 className="title">{title}</h1>
@@ -248,7 +248,7 @@ export const pageQuery = graphql`query ContactPageQuery($id: String!) {
         alt
         image {
           childImageSharp {
-            gatsbyImageData(width: 200, quality: 80, layout: CONSTRAINED)
+            gatsbyImageData(width: 210, quality: 80, layout: CONSTRAINED)
           }
         }
         name

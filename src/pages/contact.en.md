@@ -6,7 +6,7 @@ templateKey: contacts
 tags:
   - web
 lang: en
-image: /img/PersimmonHD.jpg
+image: /img/Persimmon.jpg
 date: "08-03-2019"
 address: "Malta"
 phone: '+123456789'
