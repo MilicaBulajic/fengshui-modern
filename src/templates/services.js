@@ -1,13 +1,11 @@
 import React from "react"
 import * as PropTypes from "prop-types"
-import TagList from '../components/TagList'
 import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import SEO from '../components/SEO/SEO'
 import Content, { HTMLContent } from "../components/Content"
-import Slider from '../components/Slider'
 import Features from '../components/Features'
-import Testimonials from "../components/Testimonials"
+import SubscribeForm from "../components/SubscribeForm";
 
 const ServiceTemplate = ({
   title,
@@ -16,7 +14,9 @@ const ServiceTemplate = ({
   image,
   intro,
   heading,
+  subheading,
   description,
+  link,
   tags,
   langKey
 }) => {
@@ -33,24 +33,16 @@ const ServiceTemplate = ({
         height: `720px`,
       }}
     >
-      <h1
-        className="has-text-weight-bold is-size-1"
-        style={{
-          fontFamily: "Caveat,cursive",
-          color: "#4a4a4a",
-          padding: "1rem",
-        }}
-      >
-        {heading}
-      </h1>
     </div>
     <section className="section services">
-        <h3>DESIGN YOUR HOME = DESIGN YOUR LIFE </h3>
+      <h3>{heading}</h3>
         <PageContent className="container content" content={content} />
+      <h3>{subheading}</h3>
       </section>
       <div className="column is-10 is-offset-1">
       <Features gridItems={intro.blurbs} />
       <p>{description}</p>
+      <SubscribeForm />
       </div>
     </div>
     )
@@ -59,6 +51,7 @@ const ServiceTemplate = ({
 ServiceTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heading: PropTypes.string,
+  subheading: PropTypes.string,
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -93,10 +86,11 @@ render() {
             <ServiceTemplate
             contentComponent={HTMLContent}
             heading={frontmatter.heading}
+            subheading={frontmatter.subheading}
             title={frontmatter.title}
             content={data.markdownRemark.html}
             intro={frontmatter.intro}
-            description={description}
+            description={frontmatter.description}
             tags={tags}
             langKey={langKey}
             image={dataMarkdown.frontmatter.image}
@@ -153,6 +147,7 @@ export const pageQuery = graphql`query ServicesQuery($id: String!) {
         }
       }
       heading
+      subheading
       description
       intro {
         blurbs {
@@ -162,6 +157,7 @@ export const pageQuery = graphql`query ServicesQuery($id: String!) {
             }
           }
           heading
+          subheading
           link
           text
         }

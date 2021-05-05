@@ -484,16 +484,27 @@ div.packages
   z-index: 9999
   width: 30%
   display: flex
-  padding-top: 15%
+  padding-top: 25%
   padding-left: 40px
   text-align: center
+  color: #000
+  font-size: 20px
+
+.services p.sub
+  text-align: center
+  position: absolute
+  font-weight: 600
+  width: 30%
+  z-index: 9999
+  padding-top: 18%
+  padding-left: 40px
   color: #000
   font-size: 20px
 
 @media only screen and (max-width: 600px) 
 
   .full-width-image
-    background-image: url("/img/mobilehome.jpg")!important
+    background-image: url("/img/mobilehome.jpg")
 
   .cover-text 
     text-align: center
@@ -518,23 +529,25 @@ div.packages
     margin-top: 0 
 
   .services h4.title
-    font-size: 20px
     position: absolute
     z-index: 9999
-    padding-top: 5px
     text-align: center
     width: 70%
-    margin: 0
-    color: #555555
+    padding-top: 18px
 
   .services p.features
-    position: absolute
-    z-index: 9999
+    padding-top: 55%
+    font-size: 15px
     width: 70%
-    padding-top: 25%
     text-align: center
-    font-size: 15px  
-    right: 21%
+    right: 20%
+
+  .services p.sub
+    padding-top: 40%
+    font-size: 15px
+    width: 70%
+    text-align: center
+    right: 20%
 
 
 @import "~bulma"
