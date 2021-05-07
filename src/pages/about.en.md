@@ -1,6 +1,6 @@
 ---
 id: '03'
-title: ""
+title: "About us"
 description: "Something about me"
 templateKey: about
 lang: en

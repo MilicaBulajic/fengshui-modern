@@ -1,6 +1,6 @@
 ---
 id: '03'
-title: ""
+title: "About us"
 description: "Something about me"
 templateKey: about
 lang: sr
@@ -8,7 +8,6 @@ image: /img/about.jpg
 date: "05-03-2019"
 path: /sr/onama/
 slug: /sr/onama/
-videoSourceURL: https://www.youtube.com/watch?v=BN64vf0Em_A
 ---
 
 This is our story...

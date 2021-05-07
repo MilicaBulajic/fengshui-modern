@@ -18,7 +18,7 @@ export default class BlogIndexPage extends React.Component {
         <SEO frontmatter={data.markdownRemark.frontmatter} />
         <section className="content">
             <div
-                className="full-width-image-container margin-top-0"
+                className="full-width-image-container margin-top-0 blog-mob"
                 style={{
                   backgroundImage: `url(${blog})`,
                   backgroundPosition: 'top',

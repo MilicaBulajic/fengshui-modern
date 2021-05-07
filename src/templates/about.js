@@ -11,7 +11,7 @@ const AboutPageTemplate = ({ title, content, contentComponent, image, tags, lang
   return (
     <div>
       <div
-        className="full-width-image margin-top-0"
+        className="full-width-image margin-top-0 about-mob"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -28,7 +28,6 @@ const AboutPageTemplate = ({ title, content, contentComponent, image, tags, lang
             padding: "1rem",
           }}
         >
-          {title}
         </h1>
       </div>
       <section className="about">

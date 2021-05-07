@@ -9,7 +9,7 @@ tags:
   - web
 lang: en
 date: "05-03-2019"
-image: /img/Persimmon.jpg
+image: /img/home.jpg
 heading: "Dear friends welcome to"
 mainpitch:
   heading: We help you live a wonderful life with good Feng Shui. We create good Feng Shui with Modern Design.
@@ -17,43 +17,51 @@ mainpitch:
   title: "We are Tijana and Andrew, Certified Feng Shui Consultant and Architects"
   image: /img/logo.png 
   description: The quality of your life is supported by the quality of the energy in your house. When you change your environment, you change your life. We often look for the change outside of us, when really what we need to do first is inner change, inside us and inside our space, to have happiness, luck and prosperity in all areas of life.
-  link: /sr/kontakt
+  link: /en/kontakt
 main:
   heading: What is Feng Shui
   image1:
     alt: Fengshui specialist
     image: /img/image1.jpg
 testimonials:
-  - author: Milica Bulajic
+  - author: Dusan S.
     quote: >-
-      I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad I decided to work with you.
-    image: /img/test1.png
-    alt: vddfgdf
-  - author: Milica Bulajic
-    quote: >-
-      I’m glad I decided to work with you. It’s really great how easy youre and manage. I never have any problem at all.
-    image: /img/128x128.png
-    alt: vddfgdf
+      Hello friends,  
+      I did everything you told me, I made changes in my rooms and everything is greeeeat so far ❤️ Thank you so much, I can say that you guys changed my life 🙏
+      Thank you again, have a nice day 👋
+    image: /img/test2.png
+    alt: dusan
   - author: Danica R.
     quote: >-
-      Lorem ipsum, or lipsum as it is sometimes known, web designs.
-    image: /img/128x128.png
-    alt: vddfgdf
-  - author: Suza
+      I’m so grateful to Master Tijana, because the fengshui transformation of my room which she made brought the completly new energy and improved segments of my life which I wanted to be better! If I knew before how much this can change life and how much energy is important, I would book the consultation earlier!💖
+    image: /img/test1.png
+    alt: danica
+  - author: Caka F.
     quote: >-
-      Working with Tijana and Andrew, is working with glamour, responsibility, and commitment.
-    image: /img/128x128.png
-    alt: vddfgdf
-  - author: Suza
+      Hey, Tijana and Andrew! 😊
+      I just wanted you to know that everything is more that great. At first I had  a doubt, but meeting you was the best thing in world. ❤️
+    image: /img/test3.png
+    alt: caka
+  - author: Milica B.
     quote: >-
-      Lorem ipsum, or lipsum as it is sometimes known, web designs.
-    image: /img/128x128.png
-    alt: vddfgdf
-  - author: Suza
+      I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad I decided to work with you.
+    image: /img/test5.png
+    alt: mici
+  - author: Suzana S.
     quote: >-
-      Lorem ipsum, or lipsum as it is sometimes known, web designs.
-    image: /img/128x128.png
-    alt: vddfgdf
+      Dear Mr and Mrs
+      Thank’s for your existence. 🙏 I had heavy life for ages. Everything was badly. I was trying to win it, but, it wasn’t change. Unfortunately, I staied in same situation.
+      fengshui.home was helped me. I can’t describe how it happened. Imporant is that it was happened. Everything has improved.
+      I’m happy now.
+      Thanks .
+      Blessed be you.
+    image: /img/test6.png
+    alt: suki
+  - author: Nick I.
+    quote: >-
+      Tijana & Andrew are a great team and together they bring out the best in instilling a feel-good factor through a positive approach at looking at spaces as  places for the soul. Well done and good luck with your vision of feng shui!
+    image: /img/test4.png
+    alt: nick
 intro:
   blurbs:
     - image: /img/one.jpg

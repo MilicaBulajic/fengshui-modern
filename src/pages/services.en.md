@@ -4,7 +4,7 @@ title: "Services"
 image: /img/services.jpg
 heading: DESIGN YOUR HOME = DESIGN YOUR LIFE
 subheading: HOME CONSULTATION SERVICES WE OFFER
-description: For more informations and to book your consultation please contact us and download our Booklet of Services. We are happy to hear from you!
+description: READY FOR THE CHANGE? For more informations and to book your consultation please contact us and download our Booklet of Services. We are happy to hear from you!
 templateKey: services
 tags:
   - art

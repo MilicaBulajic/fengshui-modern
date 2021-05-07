@@ -11,7 +11,7 @@ intro_paragraph:
 tags:
   - fengshui fengshuilifestyle fengshuitips fengshuiconsultant
     fengshuiarchitecture
-image: /img/Persimmon.jpg
+image: /img/home.jpg
 ---
 💛 When the energy in the space is balanced and created to suit you, the whole family thrives and feels great! 💛\
 This is the significance and purpose of Feng Shui.\

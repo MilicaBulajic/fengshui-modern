@@ -1,12 +1,12 @@
 ---
 id: '04'
-title: "Contact page"
+title: "Contact us"
 description: "Page to send an e-mail"
 templateKey: contacts
 tags:
   - web
 lang: en
-image: /img/Persimmon.jpg
+image: /img/home.jpg
 date: "08-03-2019"
 address: "Malta"
 phone: '+123456789'
@@ -22,7 +22,7 @@ imageCardSL:
   image: /img/circle.png
   name: Tijana and Andrew
   description: We are Feng Shui consultant and Architects. We are happy to help you!
-  website:   
+  website:       
 path: /en/contact
 slug: /en/contact
 ---

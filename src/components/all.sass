@@ -308,6 +308,7 @@ h3:after
 .content hr 
   border-top: 2px solid #c7a677
   margin-bottom: 50px
+  margin-top: 0px
 
 .features.p
   font-size: 2rem
@@ -380,6 +381,14 @@ div.packages
   padding: 10px 8px 10px
   border-radius: 10px
   text-align: center
+  display: block
+
+.full-width-text .form input
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  width: 100%
+
 
 .full-width-text input 
   border-radius: 5px
@@ -428,6 +437,60 @@ div.packages
   transition: .3s ease
   letter-spacing: 1px
   background: #c7a677
+
+.about button:hover
+  background: #fff
+  color: #c7a677
+
+a.button
+  height: 40px
+  padding: 0 15px
+  font-size: 15px
+  text-decoration: none
+  margin-top: 16px
+  margin-bottom: 16px
+  border-radius: 4px
+  border: 1px solid #c7a677
+  font-weight: 700
+  color: #fff
+  cursor: pointer
+  -webkit-transition: .3s ease
+  -moz-transition: .3s ease
+  -o-transition: .3s ease
+  transition: .3s ease
+  letter-spacing: 1px
+  background: #c7a677
+
+a.button:hover
+  background: #fff
+  color: #c7a677
+
+.control button.button 
+  height: 40px
+  padding: 0 15px
+  font-size: 15px
+  text-decoration: none
+  margin-top: 16px
+  margin-bottom: 16px
+  border-radius: 4px
+  border: 1px solid #c7a677
+  font-weight: 700
+  color: #fff
+  cursor: pointer
+  -webkit-transition: .3s ease
+  -moz-transition: .3s ease
+  -o-transition: .3s ease
+  transition: .3s ease
+  letter-spacing: 1px
+  background: #c7a677
+
+.control button.button:hover 
+  background: #fff
+  color: #c7a677
+  
+div.column.is-6 
+  font-size: 1.15rem
+  margin-top: 50px
 
 .followus h3
   font-size: 22px
@@ -508,6 +571,16 @@ div.packages
 
   .home-mob
     background-image: url(/img/mobilehome.jpg)!important
+  .about-mob
+    background-image: url(/img/mobileabout.jpg)!important
+  .services-mob
+    background-image: url(/img/mobileservice.jpg)!important
+  .blog-mob
+    background-image: url(/img/blogervice.jpg)!important
+
+  .full-width-text h2
+    font-size: 18px
+    padding-top: 20px
 
   .cover-text 
     display: grid
@@ -543,14 +616,14 @@ div.packages
     padding-top: 18px
 
   .services p.features
-    padding-top: 55%
+    padding-top: 65%
     font-size: 15px
     width: 70%
     text-align: center
     right: 20%
 
   .services p.sub
-    padding-top: 40%
+    padding-top: 50%
     font-size: 15px
     width: 70%
     text-align: center

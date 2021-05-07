@@ -37,7 +37,7 @@ const CustomForm = ({ status, message, onValidated }) => {
         >
             <p>
                 {status === "success" ? "Success!" :
-                    "Download Booklet of serive + Free Feng Shui tips for a happy life!"}
+                    "Download Booklet of services + Free Feng Shui tips for a happy life!"}
             </p>
 
             {status === "sending" && (

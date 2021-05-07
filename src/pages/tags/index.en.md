@@ -5,7 +5,7 @@ description: "Page for all english tags"
 templateKey: allTags
 tags:
   - gatsby
-image: /img/Persimmon.jpg
+image: /img/home.jpg
 lang: en
 date: "02-05-2019"
 path: /en/tags/

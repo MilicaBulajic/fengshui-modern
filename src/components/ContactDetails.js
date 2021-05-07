@@ -36,13 +36,6 @@ const ContactDetails = ({ infos, address, image, phone, email }) =>(
               </a>
             </div>
             )}
-            {phone && (
-              <div className="content">
-              <a className="Contact--Details--Item" href={`tel:${phone}`}>
-                <FaPhone className="menu-names"/> {phone}
-              </a>
-              </div>
-            )}
             {email && (
               <div className="content">
               <a className="Contact--Details--Item" href={`mailto:${email}`}>

@@ -1,10 +1,10 @@
 ---
 id: '05'
-title: "Feng Shui & Modern design"
+title: "Services"
 image: /img/services.jpg
-heading: 
+heading: DESIGN YOUR HOME = DESIGN YOUR LIFE
 subheading: HOME CONSULTATION SERVICES WE OFFER
-description: "We like to remind you that every calendar year the energy in the house changes. It is vital that every year we do energy update, to protect us from negative influences and make positive energy support in our life. That is the importance of Feng Shui and how it helps you live a happy and fulfilled life. We are happy to help you in this!"
+description: READY FOR THE CHANGE? For more informations and to book your consultation please contact us and download our Booklet of Services. We are happy to hear from you!
 templateKey: services
 tags:
   - art
@@ -17,7 +17,7 @@ intro:
   - image: /img/1.jpg
     heading: 1. TRANSFORM YOUR HOME = TRANSFORM AND CREATE THE LIFE YOU DESIRE 
     subheading: Full Home Consultation Package
-    link: /en/services/
+    link: /sr/servisi/
     text: >
       We transform the energy of your home and create the new energy for your desired life to manifest.
   - image: /img/2.jpg
@@ -60,4 +60,3 @@ Do you know that with a good Feng Shui you can love your home and your life? Wit
 
 
 <b>Make your home a happy and warm place where you love to be in!</b>
-HOME CONSULTATION SERVICES WE OFFER

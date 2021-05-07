@@ -1,12 +1,12 @@
 ---
 id: '04'
-title: "Contact page"
+title: "Contact us"
 description: "Page to send an e-mail"
 templateKey: contacts
 tags:
   - web
 lang: sr
-image: /img/Persimmon.jpg
+image: /img/home.jpg
 date: "08-03-2019"
 address: "Malta"
 phone: '+123456789'
@@ -19,10 +19,10 @@ locations:
    message: ''
 imageCardSL:
   alt: "immagine"
-  image: /img/128x128.png
+  image: /img/circle.png
   name: Tijana and Andrew
-  description: We are Feng Shui specialists, follow us in this adventure!
-  website: website
+  description: We are Feng Shui consultant and Architects. We are happy to help you!
+  website: .
 path: /sr/kontakt
 slug: /sr/kontakt
 ---

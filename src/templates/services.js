@@ -41,10 +41,19 @@ const ServiceTemplate = ({
       </section>
       <div className="column is-10 is-offset-1">
       <Features gridItems={intro.blurbs} />
-      <p>{description}</p>
-      <SubscribeForm />
       </div>
-    </div>
+      <section className="section full-width-text">
+        <div className="columns mobile">
+          <div className="column is-6 is-offset-1">
+          <p>{description}</p>
+          </div>
+          <div className="column is-4 second">
+            <SubscribeForm />
+          </div>
+        </div>
+      </section>
+      </div>
+
     )
 }
 
