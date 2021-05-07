@@ -35,8 +35,9 @@ export default class BlogIndexPage extends React.Component {
                   <FormattedMessage id="blog-message" />
                 </h1>
               </div>
-              <div className="column is-10 is-offset-1">
-            <BlogRoll />
+              <div className="column is-10 is-offset-1 blog">
+                <h3>LAST NEWS</h3>
+                 <BlogRoll />
             </div>
         </section>
       </Layout>
