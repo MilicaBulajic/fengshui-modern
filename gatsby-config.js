@@ -141,7 +141,6 @@ module.exports = {
         short_name: `Fs`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#D64000`,
         display: `standalone`,
         icon: `src/img/icon.png`,
       },

@@ -24,11 +24,7 @@ const SelectLanguage = (props) => {
 
   return (
     <div className="section" style={{ padding: '1.5rem' }}>
-      <header style={{
-        color: '#D64000'
-      }}>
         <FormattedMessage id="selectLanguage" />
-      </header>
       <ul>
         {links}
       </ul>
