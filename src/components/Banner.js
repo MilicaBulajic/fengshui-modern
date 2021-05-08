@@ -13,7 +13,6 @@ const Banner = ({main, mainpitch}) =>(
        <div className="columns is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
            <div className="column is-three-fifths is-offset-one-fifth"
                 style={{
-                  backgroundImage: 'linear-gradient(rgb(255, 68, 0), yellow)',
                   borderRadius: '4px',
                 }}>
                 <h3 className="title has-text-light has-text-centered">{mainpitch.heading}</h3>
