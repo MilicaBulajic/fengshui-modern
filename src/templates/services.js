@@ -28,9 +28,7 @@ const ServiceTemplate = ({
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top`,
-        height: `720px`,
+        })`
       }}
     >
     </div>

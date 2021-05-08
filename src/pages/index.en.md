@@ -62,6 +62,11 @@ testimonials:
       Tijana & Andrew are a great team and together they bring out the best in instilling a feel-good factor through a positive approach at looking at spaces as  places for the soul. Well done and good luck with your vision of feng shui!
     image: /img/test4.png
     alt: nick
+  - author: Stefan G.
+    quote: >-
+      Hi, I wish to thank you for everything you did for my office place! The space feels much larger and brighter and everyone who enters feels the difference. My work goes much better and I have more clients and income coming to me!
+    image: /img/test7.png
+    alt: stefan
 intro:
   blurbs:
     - image: /img/one.jpg

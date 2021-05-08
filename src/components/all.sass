@@ -101,7 +101,7 @@ h3:after
 // Helper Classes
 .full-width-image-container
   width: 100vw
-  height: 400px
+  height: 780px
   position: relative
   left: 50%
   right: 50%
@@ -113,13 +113,13 @@ h3:after
   align-items: center
 
 .full-width-image
-    width: 100vw
-    height: 400px
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
+  width: 100vw
+  height: 768px
+  background-size: contain
+  background-repeat: no-repeat
+  display: flex
+  justify-content: center
+  align-items: center
 
 .full-width-text
     background-color: #c7a677
@@ -572,27 +572,24 @@ div.column.is-6
 
 @media only screen and (max-width: 600px) 
 
-  .home-mob
-    background-image: url(/img/mobilehome.jpg)!important
+  .full-width-image-container
+    height: 270px
 
-  .about-mob
-    background-image: url(/img/mobileabout.jpg)!important
-
-  .services-mob
-    background-image: url(/img/mobileservice.jpg)!important
-
-  .blog-mob
-    background-image: url(/img/blogervice.jpg)!important
+  .full-width-image
+    height: 270px
 
   .full-width-text h2
     font-size: 18px
-    padding-top: 20px
+
+  section.section.full-width-text
+    margin-top: -31px
+    padding-top: 63px
 
   .cover-text 
     display: grid
     text-align: center
     width: 100%
-    margin-top: 480px
+    margin-top: 200px
     background-color: #fff
     left: 0
     border-radius: 0 

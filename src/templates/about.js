@@ -16,8 +16,6 @@ const AboutPageTemplate = ({ title, content, contentComponent, image, tags, lang
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
-          backgroundPosition: `center`,
-          height: `750px`,
         }}
       >
         <h1

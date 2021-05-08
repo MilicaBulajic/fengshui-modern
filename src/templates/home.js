@@ -41,11 +41,10 @@ const HomePageTemplate = ({
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
-          height: `780px`,
+          })`
         }}
       >
-        <div className="cover-text animated is-size-5-mobile bounceInRight">
+        <div className="cover-text animated bounceInRight">
           <h2 className="is-size-5-mobile animated bounceInRight">{heading}</h2>
           <h1 className="is-size-5-mobile animated bounceInRight">{title}</h1>
           <div className="buttons">
@@ -65,7 +64,7 @@ const HomePageTemplate = ({
           </button>
           </div>
         </div>
-      </div>
+        </div>
       <section className="section full-width-text">
         <div className="columns mobile">
           <div className="column is-8 is-offset-1">

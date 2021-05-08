@@ -22,18 +22,8 @@ export default class BlogIndexPage extends React.Component {
                 style={{
                   backgroundImage: `url(${blog})`,
                   backgroundPosition: 'top',
-                  height: `770px`,
                 }}
               >
-                <h1
-                  className="has-text-weight-bold is-size-1"
-                  style={{
-                    color: '#4a4a4a',
-                    padding: '1rem',
-                  }}
-                >
-                  <FormattedMessage id="blog-message" />
-                </h1>
               </div>
               <div className="column is-10 is-offset-1 blog">
                 <h3>LAST NEWS</h3>
