@@ -14,6 +14,8 @@ import SubscribeForm from "../components/SubscribeForm";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { navigate } from "gatsby";
 import Instagram from "../components/Instagram";
+import Buttons from "../components/Buttons";
+import Button from "../components/Button";
 
 const HomePageTemplate = ({
   image,
@@ -36,35 +38,24 @@ const HomePageTemplate = ({
 
   return (
     <div>
+      <section>
       <div
         className="full-width-image margin-top-0 home-mob"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`
+          })`,
         }}
       >
         <div className="cover-text animated bounceInRight">
           <h2 className="is-size-5-mobile animated bounceInRight">{heading}</h2>
           <h1 className="is-size-5-mobile animated bounceInRight">{title}</h1>
           <div className="buttons">
-          <button
-            onClick={() => {
-              navigate("about");
-            }}
-          >
-            ABOUT
-          </button>
-          <button
-            onClick={() => {
-              navigate("services");
-            }}
-          >
-            SERVICES
-          </button>
+            <Buttons langKey={langKey} />
           </div>
         </div>
-        </div>
+      </div>
+      </section>
       <section className="section full-width-text">
         <div className="columns mobile">
           <div className="column is-8 is-offset-1">
@@ -73,7 +64,7 @@ const HomePageTemplate = ({
             <p>{mainpitch.description}</p>
           </div>
           <div className="column is-2 second">
-          <p>{description}</p>
+            <p>{description}</p>
             <SubscribeForm />
           </div>
         </div>
@@ -94,13 +85,7 @@ const HomePageTemplate = ({
                   <article className="tile is-child">
                     <h3>{main.heading}</h3>
                     <PageContent className="content" content={content} />
-                    <button
-                      onClick={() => {
-                        navigate("services");
-                      }}
-                    >
-                      YES, PLEASE!
-                    </button>
+                    <Button langKey={langKey} />
                   </article>
                 </div>
                 <div className="tile is-parent">
@@ -127,8 +112,7 @@ const HomePageTemplate = ({
           <Testimonials testimonials={testimonials} />
         </div>
       </section>
-      <section>
-      </section>
+      <section></section>
     </div>
   );
 };
@@ -188,7 +172,7 @@ class HomePage extends React.Component {
             testimonials={dataMarkdown.frontmatter.testimonials}
           />
         </div>
-        <FollowUs link={linkinsta} instagram={instagram}/>
+        <FollowUs link={linkinsta} instagram={instagram} />
         <Instagram />
       </Layout>
     );
