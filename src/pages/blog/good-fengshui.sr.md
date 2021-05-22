@@ -13,7 +13,7 @@ tags:
     fengshuiarchitecture
 image: /img/home.jpg
 ---
-💛 When the energy in the space is balanced and created to suit you, the whole family thrives and feels great! 💛\
+💛 When the energy in the space is balanced and created to suit you, the whole family thrives and feels great 💛\
 This is the significance and purpose of Feng Shui.\
 ☺️\
 We create the energy of space that will support you in life and bring you peace, happiness and fulfillment.🙌
