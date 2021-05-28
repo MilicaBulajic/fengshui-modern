@@ -73,6 +73,14 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  if (stage === "build-javascript") {
+      config._config.entry.app = ["babel-polyfill", config.resolve().entry.app];
+  }
+
+  return config;
+};
+
 exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
   const config = getConfig()
   if (stage.startsWith('develop') && config.resolve) {

@@ -4,8 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
- async function loadPolyfills() {
-  if (typeof window.IntersectionObserver === 'undefined') {
-    await import('intersection-observer');
+ import 'babel-polyfill'
+
+ export const onClientEntry = async () => {
+  if (typeof IntersectionObserver === "undefined") {
+    await import("intersection-observer")
   }
 }
