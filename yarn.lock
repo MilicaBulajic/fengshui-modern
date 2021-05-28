@@ -6959,6 +6959,13 @@ gatsby-legacy-polyfills@^1.4.0:
   dependencies:
     core-js-compat "3.9.0"
 
+gatsby-legacy-polyfills@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-1.6.0.tgz#6d217afbbf015ad704d0253fa1de333e42e6a125"
+  integrity sha512-Qqk+THLhQhlYpdMsOcFwBmSrF06BT273rQ4he4g5YGg3l57wpzHQX2zt8yuLIE/6zzA5q/hTYg9MFIniYRBG/A==
+  dependencies:
+    core-js-compat "3.9.0"
+
 gatsby-link@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-3.4.0.tgz#110a902f5d06458f637119580e061bdcfe0c3dd7"
