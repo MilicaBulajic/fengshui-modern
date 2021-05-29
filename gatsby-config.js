@@ -159,11 +159,5 @@ module.exports = {
     }
   },
   `gatsby-plugin-gatsby-cloud`,
-  {
-    resolve: `gatsby-plugin-polyfill-io`,
-    options: {
-       features: [`Array.prototype.map`, `fetch`]
-    },
-  },
   ],
 }

@@ -12,7 +12,7 @@ date: "05-03-2019"
 image: /img/home.jpg
 heading: "Dear friends welcome to"
 mainpitch:
-  heading: We help you live a wonderful life with good Feng Shui. We create good Feng Shui with Modern Design.
+  heading: We help you not only to have a nice house, but a home where you feel wonderful. We help you live a wonderful life with good Feng Shui. We create good Feng Shui with Modern Design.
   subheading: WHAT PEOPLE SAY
   title: "We are Tijana and Andrew, Certified Feng Shui Consultant and Architects"
   image: /img/logo.png 
