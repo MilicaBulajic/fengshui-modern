@@ -6,6 +6,13 @@ import Helmet from 'react-helmet'
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider } from 'react-intl';
 import './all.sass'
+import {shouldPolyfill} from '@formatjs/intl-locale/should-polyfill'
+async function polyfill() {
+  // This platform already supports Intl.Locale
+  if (shouldPolyfill()) {
+    await import('@formatjs/intl-locale/polyfill')
+  }
+}
 
 if (!Intl.RelativeTimeFormat) {
   require('@formatjs/intl-relativetimeformat/polyfill');
