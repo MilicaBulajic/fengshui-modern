@@ -36,6 +36,16 @@
       "sr": "well-being"
     },
     {
+      "id": "08",
+      "en": "shop",
+      "sr": "prodavnica"
+    },
+    {
+      "id": "09",
+      "en": "success",
+      "sr": "uspeh"
+    },
+    {
       "id": "13",
       "en": "/",
       "sr": "/"

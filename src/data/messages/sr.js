@@ -42,6 +42,7 @@ module.exports = {
   'info-sheet-dimensions': 'Dimensioni: ',
   'find-out-more': 'Scopri di più...',
   'contact': 'Kontakt',
+  'shop': 'Prodavnica',
   'contact.infos': 'Kontakt',
   'contact.fill-the-form': 'Posaljite nam poruku putem forme',
   'contact.name': 'Ime',

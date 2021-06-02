@@ -42,6 +42,7 @@ module.exports = {
   'info-sheet-technique': 'Technique: ',
   'info-sheet-dimensions': 'Dimensions: ',
   'contact': 'Contact',
+  'shop': 'Shop',
   'contact.infos': 'Contact us',
   'contact.fill-the-form': 'Fill the form to send a message',
   'contact.name': 'Name',

@@ -159,5 +159,13 @@ module.exports = {
     }
   },
   `gatsby-plugin-gatsby-cloud`,
+  {
+    resolve: `gatsby-source-stripe`,
+    options: {
+      objects: ['Product'],
+      secretKey: process.env.SECRET_STRIPE_KEY,
+      downloadFiles: true,
+    }
+  }
   ],
 }
