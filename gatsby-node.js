@@ -73,12 +73,23 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
-exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
-  const config = getConfig()
-  if (stage.startsWith('develop') && config.resolve) {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'react-dom': '@hot-loader/react-dom'
-    }
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /canvas/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
   }
-}
+};
