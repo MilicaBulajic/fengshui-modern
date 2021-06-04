@@ -13,7 +13,7 @@ const Checkout = () => {
     const { error } = await stripe.redirectToCheckout({
       mode: 'payment',
       lineItems: [{ price: process.env.GATSBY_BUTTON_PRICE_ID, quantity: 1 }],
-      successUrl: `${window.location.origin}/`,
+      successUrl: `${window.location.origin}/en/success/`,
       cancelUrl: `${window.location.origin}/`,
     })
 

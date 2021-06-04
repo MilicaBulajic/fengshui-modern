@@ -2,32 +2,27 @@ import React from "react";
 import * as PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import SEO from "../components/SEO/SEO";
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import Content, { HTMLContent } from "../components/Content";
-import Checkout from "../components/checkout.js";
-import Book from "../components/Book";
 
-const ShopPageTemplate = ({ title, content, contentComponent, image, description, langKey }) => {
+
+const SuccessPageTemplate = ({ title, content, contentComponent, image, tags, langKey }) => {
   const PageContent = contentComponent || Content;
   return (
     <div>
+    <GatsbySeo noindex={true} />
       <section className="about">
-        <div className="column is-12 is-offset-1">
+        <div className="column is-10 is-offset-1">
           <div className="tile is-ancestor">
             <div className="tile is-vertical">
               <div className="tile">
                 <div className="tile is-parent is-vertical">
                   <article className="tile is-child">
-                    <h3>{title}</h3>
-                    <p>{description}</p>
-                    <Book />
                     <PageContent className="content" content={content} />
                   </article>
                 </div>
                 <div className="tile is-parent">
                   <article className="tile is-child">
-                    <p>Price €0.00</p>
-                    <Checkout />
                   </article>
                 </div>
               </div>
@@ -35,12 +30,30 @@ const ShopPageTemplate = ({ title, content, contentComponent, image, description
           </div>
         </div>
       </section>
+      <div
+      className="full-width-image margin-top-0 about-mob"
+      style={{
+        backgroundImage: `url(${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`,
+      }}
+    >
+      <h1
+        className="has-text-weight-bold is-size-1"
+        style={{
+          fontFamily: "Caveat,cursive",
+          color: "#4a4a4a",
+          padding: "1rem",
+        }}
+      >
+      </h1>
+    </div>
     </div>
   );
 };
   
 
-ShopPageTemplate.propTypes = {
+SuccessPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -48,7 +61,7 @@ ShopPageTemplate.propTypes = {
   langKey: PropTypes.string,
 };
 
-class ShopPage extends React.Component {
+class SuccessPage extends React.Component {
   render() {
     var dataMarkdown = [];
     if (this.props.data !== null) {
@@ -56,7 +69,7 @@ class ShopPage extends React.Component {
     }
     const jsonData = this.props.data.allArticlesJson.edges[0].node.articles;
     const { frontmatter } = dataMarkdown;
-    const image = dataMarkdown.frontmatter.imageCardSL;
+    const image = frontmatter.image.childImageSharp.fluid.src;
     const langKey = frontmatter.lang;
     const tags = frontmatter.tags;
     return (
@@ -66,14 +79,13 @@ class ShopPage extends React.Component {
         jsonData={jsonData}
         location={this.props.location}
       >
-        <SEO frontmatter={frontmatter} postImage={image} />
+        <GatsbySeo noindex={true} />
         <div>
-          <ShopPageTemplate
+          <SuccessPageTemplate
             image={dataMarkdown.frontmatter.image}
             contentComponent={HTMLContent}
             title={dataMarkdown.frontmatter.title}
             content={dataMarkdown.html}
-            description={frontmatter.description}
             tags={tags}
             langKey={langKey}
           />
@@ -83,14 +95,14 @@ class ShopPage extends React.Component {
   }
 }
 
-ShopPage.propTypes = {
+SuccessPage.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default ShopPage;
+export default SuccessPage;
 
 export const pageQuery = graphql`
-  query ShopPageQuery($id: String!) {
+  query SuccessPageQuery($id: String!) {
     site {
       siteMetadata {
         languages {

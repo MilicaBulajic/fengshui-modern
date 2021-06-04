@@ -11,7 +11,7 @@ module.exports = {
   This is a blog theme. The description will be showed in SEO results on pages
   without their own descriptions.
 `,
-    siteUrl: "https://gatsby-starter-i18n-bulma.netlify.app",
+    siteUrl: "https://fengshuimoderndesign.com/",
     image: 'img.jpg',
     author: {
       name: 'Your Name',
@@ -134,6 +134,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-robots-txt',
+    'gatsby-plugin-next-seo',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

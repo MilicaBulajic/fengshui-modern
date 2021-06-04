@@ -8,6 +8,7 @@ function Book() {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
+  
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
@@ -25,23 +26,24 @@ function Book() {
   }
 
   return (
-    <div>
-      <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} />
+    <div id="PDFContainer">
+      <Document className={"PDFDocument"} file={file} onLoadSuccess={onDocumentLoadSuccess}>
+        <Page className={"PDFPage PDFPageOne"} pageNumber={pageNumber} />
       </Document>
       <p>
         Page {pageNumber} of {numPages}
       </p>
-      <button type="button" disabled={pageNumber <= 1} onClick={previousPage}>
+      <a type="button" className={"bookbutton"} disabled={pageNumber <= 1} onClick={previousPage}>
         Previous
-      </button>
-      <button
+      </a>
+      <a
+        className={"bookbutton"}
         type="button"
         disabled={pageNumber >= numPages}
         onClick={nextPage}
       >
         Next
-      </button>
+      </a>
     </div>
   );
 }
