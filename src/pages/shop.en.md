@@ -1,7 +1,7 @@
 ---
 id: '08'
 title: "SHOP"
-description: "We are happy to present you new ebook"
+description: "We are happy to present you new e-book:"
 templateKey: shop
 lang: en
 image: /img/about.jpg

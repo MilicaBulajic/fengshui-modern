@@ -26,18 +26,21 @@ function Book() {
   }
 
   return (
+    <>
     <div id="PDFContainer">
-      <Document className={"PDFDocument"} file={file} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page className={"PDFPage PDFPageOne"} pageNumber={pageNumber} />
+      <Document className="PDFDocument" file={file} onLoadSuccess={onDocumentLoadSuccess}>
+        <Page className="PDFPage PDFPageOne" pageNumber={pageNumber} />
       </Document>
-      <p>
+    </div>
+    <div>
+    <p>
         Page {pageNumber} of {numPages}
       </p>
-      <a type="button" className={"bookbutton"} disabled={pageNumber <= 1} onClick={previousPage}>
+      <a type="button" className="bookbutton" disabled={pageNumber <= 1} onClick={previousPage}>
         Previous
       </a>
       <a
-        className={"bookbutton"}
+        className="bookbutton"
         type="button"
         disabled={pageNumber >= numPages}
         onClick={nextPage}
@@ -45,6 +48,7 @@ function Book() {
         Next
       </a>
     </div>
+    </>
   );
 }
 

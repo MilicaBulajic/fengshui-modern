@@ -1,9 +1,9 @@
 ---
 id: '08'
-title: "About us"
-description: "Something about me"
+title: "PRODAVNICA"
+description: "Sa radoscu Vam predstavljamo nasu novu knjgu"
 templateKey: shop
-lang: en
+lang: sr
 image: /img/about.jpg
 date: "05-03-2019"
 path: /sr/prodavnica/

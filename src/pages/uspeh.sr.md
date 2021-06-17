@@ -4,10 +4,12 @@ title: "Hvala"
 description: "Something about me"
 templateKey: success
 lang: sr
-image: /img/about.jpg
+image: /img/chi.png
 date: "05-03-2019"
 path: /sr/uspeh/
 slug: /sr/uspeh/
 ---
 
-This is our story...
+✨ Hvala! Verujemo da će knjiga da donese svetlo u Vas život! ✨
+
+[Preuzmi knjigu ovde](9-koraka.pdf)

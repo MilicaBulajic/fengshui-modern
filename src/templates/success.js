@@ -10,7 +10,6 @@ const SuccessPageTemplate = ({ title, content, contentComponent, image, tags, la
   const PageContent = contentComponent || Content;
   return (
     <div>
-    <GatsbySeo noindex={true} />
       <section className="about">
         <div className="column is-10 is-offset-1">
           <div className="tile is-ancestor">
@@ -70,7 +69,7 @@ class SuccessPage extends React.Component {
     const jsonData = this.props.data.allArticlesJson.edges[0].node.articles;
     const { frontmatter } = dataMarkdown;
     const image = frontmatter.image.childImageSharp.fluid.src;
-    const langKey = frontmatter.lang;
+    const langKey = dataMarkdown.frontmatter.lang;
     const tags = frontmatter.tags;
     return (
       <Layout
@@ -79,7 +78,6 @@ class SuccessPage extends React.Component {
         jsonData={jsonData}
         location={this.props.location}
       >
-        <GatsbySeo noindex={true} />
         <div>
           <SuccessPageTemplate
             image={dataMarkdown.frontmatter.image}
@@ -97,6 +95,7 @@ class SuccessPage extends React.Component {
 
 SuccessPage.propTypes = {
   data: PropTypes.object.isRequired,
+  langKey: PropTypes.string,
 };
 
 export default SuccessPage;

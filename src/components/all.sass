@@ -579,6 +579,32 @@ div.column.is-6
 .blog h3  
   text-align: center
 
+#PDFContainer 
+  max-width: 100% !important
+  margin: auto 
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.PDFDocument 
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.PDFPage 
+  margin-top: 25px
+  box-shadow: 0 0 8px rgba(0, 0, 0, .5)
+
+.PDFPageOne 
+  margin-bottom: 25px
+
+.PDFPage > canvas 
+    max-width: 100%
+    height: auto !important
+
+.shop 
+  text-align: center
+
 @media only screen and (max-width: 600px) 
 
   .full-width-image-container
@@ -653,33 +679,31 @@ div.column.is-6
   .contacts .content figure 
     margin-left: 0
 
-
-#PDFContainer 
-    margin:auto
+  #PDFContainer 
+    width: 90%
+    overflow-x: hidden !important
+    zoom: 60%
+    margin: auto 
     display: flex
     flex-direction: column
     align-items: center
 
-
-.PDFDocument 
+  .PDFDocument 
     display: flex
     flex-direction: column
+    overflow-x: hidden !important
     align-items: center
 
-
-.PDFPage 
+  .PDFPage 
     margin-top: 25px
     box-shadow: 0 0 8px rgba(0, 0, 0, .5)
 
-
-.PDFPageOne 
+  .PDFPageOne 
     margin-bottom: 25px
 
-
-.PDFPage > canvas 
+  .PDFPage > canvas 
     max-width: 100%
     height: auto !important
-
 
 
 @import "~bulma"

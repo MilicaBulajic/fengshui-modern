@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO/SEO";
 import Content, { HTMLContent } from "../components/Content";
-import Checkout from "../components/checkout.js";
+import Buy from "../components/Buy";
 import Book from "../components/Book";
 
 const ShopPageTemplate = ({ title, content, contentComponent, image, description, langKey }) => {
@@ -17,7 +17,7 @@ const ShopPageTemplate = ({ title, content, contentComponent, image, description
             <div className="tile is-vertical">
               <div className="tile">
                 <div className="tile is-parent is-vertical">
-                  <article className="tile is-child">
+                  <article className="shop">
                     <h3>{title}</h3>
                     <p>{description}</p>
                     <Book />
@@ -27,7 +27,7 @@ const ShopPageTemplate = ({ title, content, contentComponent, image, description
                 <div className="tile is-parent">
                   <article className="tile is-child">
                     <p>Price €0.00</p>
-                    <Checkout />
+                    <Buy langKey={langKey} />
                   </article>
                 </div>
               </div>
@@ -50,14 +50,16 @@ ShopPageTemplate.propTypes = {
 
 class ShopPage extends React.Component {
   render() {
-    var dataMarkdown = [];
+    let data;
+    let dataMarkdown = [];
     if (this.props.data !== null) {
       dataMarkdown = this.props.data.markdownRemark;
+      data = this.props.data;
     }
     const jsonData = this.props.data.allArticlesJson.edges[0].node.articles;
     const { frontmatter } = dataMarkdown;
     const image = dataMarkdown.frontmatter.imageCardSL;
-    const langKey = frontmatter.lang;
+    const langKey = dataMarkdown.frontmatter.lang;
     const tags = frontmatter.tags;
     return (
       <Layout
@@ -84,6 +86,7 @@ class ShopPage extends React.Component {
 }
 
 ShopPage.propTypes = {
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   data: PropTypes.object.isRequired,
 };
 
