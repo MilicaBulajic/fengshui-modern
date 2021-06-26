@@ -25,8 +25,8 @@ const ShopPageTemplate = ({ title, content, contentComponent, image, description
                   </article>
                 </div>
                 <div className="tile is-parent">
-                  <article className="tile is-child">
-                    <p>Price €0.00</p>
+                  <article className="tile is-child buy">
+                    <p className="price">Price €0.00</p>
                     <Buy langKey={langKey} />
                   </article>
                 </div>

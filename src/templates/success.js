@@ -35,6 +35,7 @@ const SuccessPageTemplate = ({ title, content, contentComponent, image, tags, la
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
+        width: "50%"
       }}
     >
       <h1
