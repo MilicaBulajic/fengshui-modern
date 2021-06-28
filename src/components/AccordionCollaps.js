@@ -27,7 +27,7 @@ const AccordionCollaps = ( props ) => {
         {switches &&( switches.map(( message ) => (
           <div className="content">
           <Link className="navbar-item" key={message} to={links[message][sel]}>
-            <FormattedMessage id={message} />
+            <FormattedMessage id={buy} />
           </Link>
           </div>
          )))}

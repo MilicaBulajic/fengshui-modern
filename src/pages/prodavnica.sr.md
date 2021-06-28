@@ -1,7 +1,8 @@
 ---
 id: '08'
 title: "PRODAVNICA"
-description: "Sa radoscu Vam predstavljamo nasu novu knjgu"
+description: "Sa radošću Vam predstavljamo našu novu knjgu:"
+subdescription: "Na srpskom jeziku takodje:"
 templateKey: shop
 lang: sr
 image: /img/about.jpg

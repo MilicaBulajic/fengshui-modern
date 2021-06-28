@@ -6,8 +6,10 @@ import SEO from "../components/SEO/SEO";
 import Content, { HTMLContent } from "../components/Content";
 import Buy from "../components/Buy";
 import Book from "../components/Book";
+import BookSR from "../components/BookSR";
 
-const ShopPageTemplate = ({ title, content, contentComponent, image, description, langKey }) => {
+
+const ShopPageTemplate = ({ title, content, contentComponent, subdescription, description, langKey }) => {
   const PageContent = contentComponent || Content;
   return (
     <div>
@@ -21,6 +23,8 @@ const ShopPageTemplate = ({ title, content, contentComponent, image, description
                     <h3>{title}</h3>
                     <p>{description}</p>
                     <Book />
+                    <p>{subdescription}</p>
+                    <BookSR />
                     <PageContent className="content" content={content} />
                   </article>
                 </div>
@@ -76,6 +80,7 @@ class ShopPage extends React.Component {
             title={dataMarkdown.frontmatter.title}
             content={dataMarkdown.html}
             description={frontmatter.description}
+            subdescription={frontmatter.subdescription}
             tags={tags}
             langKey={langKey}
           />
@@ -118,6 +123,7 @@ export const pageQuery = graphql`
         id
         title
         description
+        subdescription
         tags
         lang
         image {
