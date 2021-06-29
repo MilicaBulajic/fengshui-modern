@@ -34,10 +34,10 @@ function BookSR() {
     </div>
     <div>
     <p>
-        Page {pageNumber} of {numPages}
+        Strana {pageNumber} od {numPages}
       </p>
       <a type="button" className="bookbutton" disabled={pageNumber <= 1} onClick={previousPage}>
-        Previous
+        Prethodna
       </a>
       <a
         className="bookbutton"
@@ -45,7 +45,7 @@ function BookSR() {
         disabled={pageNumber >= numPages}
         onClick={nextPage}
       >
-        Next
+        Sledeća
       </a>
     </div>
     </>

@@ -14,7 +14,7 @@ const Buy = class extends React.Component {
         <Link
           to={"/" + props.langKey + "/" + menuTree.success[sel] +"/"}
         >
-          BUY E-BOOK
+          <FormattedMessage id="info-book" />
         </Link>
       </button>
     );

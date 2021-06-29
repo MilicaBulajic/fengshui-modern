@@ -7,6 +7,7 @@ import Content, { HTMLContent } from "../components/Content";
 import Buy from "../components/Buy";
 import Book from "../components/Book";
 import BookSR from "../components/BookSR";
+import { FormattedMessage } from "react-intl";
 
 
 const ShopPageTemplate = ({ title, content, contentComponent, subdescription, description, langKey }) => {
@@ -30,7 +31,7 @@ const ShopPageTemplate = ({ title, content, contentComponent, subdescription, de
                 </div>
                 <div className="tile is-parent">
                   <article className="tile is-child buy">
-                    <p className="price">Price €0.00</p>
+                    <FormattedMessage id="info-price" />
                     <Buy langKey={langKey} />
                   </article>
                 </div>
