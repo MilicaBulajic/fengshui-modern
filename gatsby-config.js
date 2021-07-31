@@ -5,6 +5,10 @@ require("dotenv").config({
 const languages = require('./src/data/languages');
 
 module.exports = {
+  flags: {
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    DEV_WEBPACK_CACHE: true
+  },
   siteMetadata: {
     title: `Gatsby with Bulma and i18n`,
     description: `
