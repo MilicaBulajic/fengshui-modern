@@ -11,8 +11,7 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Lightbox from "../components/Lightbox";
 import FollowUs from "../components/FollowUs";
 import SubscribeForm from "../components/SubscribeForm";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { navigate } from "gatsby";
+import { FormattedMessage } from "react-intl";
 import Instagram from "../components/Instagram";
 import Buttons from "../components/Buttons";
 import Button from "../components/Button";
@@ -101,7 +100,7 @@ const HomePageTemplate = ({
       <section className="whyfs">
         <div className="tile is-parent">
           <article className="tile is-child">
-            <h3>WHY FENG SHUI</h3>
+            <h3><FormattedMessage id="why" /></h3>
             <Lightbox gridItems={intro.blurbs} />
           </article>
         </div>

@@ -1,6 +1,6 @@
 ---
 id: '04'
-title: "Contact us"
+title: "Kontaktirajte nas"
 description: "Page to send an e-mail"
 templateKey: contacts
 tags:
@@ -20,11 +20,11 @@ locations:
 imageCardSL:
   alt: "immagine"
   image: /img/circle.png
-  name: Tijana and Andrew
-  description: We are Feng Shui consultant and Architects. We are happy to help you!
+  name: Tijana i Andrew
+  description: Mi smo Feng Shui konsultant i arhitekte. Mi smo srećni da vam pomognemo!
   website: .
 path: /sr/kontakt
 slug: /sr/kontakt
 ---
 
-Contact us for more informations.
+Kontaktirajte nas za više informacija. 

@@ -10,16 +10,16 @@ tags:
 lang: sr
 date: "05-03-2019"
 image: /img/home.jpg
-heading: "Dear friends welcome to"
+heading: "Dragi prijatelji, dobrodošli u"
 mainpitch:
-  heading: We help you not only to have a nice house, but a home where you feel wonderful. We help you live a wonderful life with good Feng Shui. We create good Feng Shui with Modern Design.
-  subheading: WHAT PEOPLE SAY
-  title: "We are Tijana and Andrew, Certified Feng Shui Consultant and Architects"
+  heading: Mi vam pomažemo ne samo da imate lepu kuću, već dom u kome se osećate divno. Pomažemo vam da živite divan život sa dobrim Feng Shui-em. Mi kreiramo dobar Feng Shui sa modernim dizajnom.
+  subheading: ŠTA LJUDI KAŽU?
+  title: "MI SMO TIJANA I ANDREW, SERTIFIKOVANI FENG SHUI KONSULTANT I ARHITEKTE."
   image: /img/logo.png 
-  description: The quality of your life is supported by the quality of the energy in your house. When you change your environment, you change your life. We often look for the change outside of us, when really what we need to do first is inner change, inside us and inside our space, to have happiness, luck and prosperity in all areas of life.
+  description: Kvalitet vašeg života podržava kvalitet energije u vašoj kući. Kada promenite svoje okruženje, vi ćete promeniti vaš život. Mi često tražimo promenu izvan sebe, kada zaista ono što prvo treba da uradimo je unutrašnja promena, unutar nas i unutar našeg prostora, da bismo imali radost, sreću i prosperitet u svim životnim poljima.
   link: /en/kontakt
 main:
-  heading: What is Feng Shui
+  heading: ŠTA JE FENG SHUI?
   image1:
     alt: Fengshui specialist
     image: /img/image1.jpg
@@ -74,15 +74,15 @@ path: /sr/
 slug: /sr/
 ---
 
-Feng Shui is an ancient Chinese art which we use in our modern time and modern home design to help us create the life we desire. <b>When we heal the energy in us and around us, we transform our life.</b> 
+Feng Shui je drevna kineska umetnost koju koristimo u našem modernom vremenu i modernom dizajnu kuće kako bi nam pomogla da kreiramo život kakav želimo. <b>Mi transformišemo svoj život kada izlečimo energiju u sebi i oko sebe.</b> 
 
-<b>The balance of the energy in your house will eventually reflect in your life.</b>
-If we can first heal the energy in the house, why wait for it to manifest in your life or your body?
+<b>Ravnoteža energije u vašoj kući će se svakako odraziti i na vaš život.</b>
+Ako prvo možemo izlečiti energiju u kući, zašto čekati da se ona manifestuje u vašem životu ili vašem telu?
 
-Feng Shui helps you easily remove unwanted things from your life. It supports you to live in health, happiness, joy, abundance. It helps you Manifest your dreams, remove obstacles and open the doors to new possibilities.
+Feng Shui vam pomaže da lako uklonite neželjene stvari iz vašeg života. Podržava vas da živite u zdravlju, sreći, radosti, obilju. Pomaže vam da živite svoje snove, uklonite prepreke i otvorite vrata novim mogućnostima.
 
-<b>Feng shui brings you great happiness and success in everything you do!</b>
+<b>Feng Shui vam donosi veliku sreću i uspeh u svemu što radite!</b>
 
-Love yourself enough to live the life of your dreams. You deserve it! With the good energy flow of your home and desire in your heart, you can achieve anything. We are happy to help you!
+Volite sebe dovoljno da živite život svojih snova. Vi to zaslužujete! Sa dobrim protokom energije u vašem domu i željom u srcu, vi možete postići sve. Mi smo srećni da vam pomognemo u tome!
 
-<b>Ready to CHANGE YOUR LIFE?</b>
+<b>Spremni da PROMENITE SVOJ ŽIVOT?</b>

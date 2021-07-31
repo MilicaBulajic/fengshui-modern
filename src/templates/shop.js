@@ -6,11 +6,12 @@ import SEO from "../components/SEO/SEO";
 import Content, { HTMLContent } from "../components/Content";
 import Buy from "../components/Buy";
 import Book from "../components/Book";
-import BookSR from "../components/BookSR";
+import Slider from '../components/Slider'
 import { FormattedMessage } from "react-intl";
 
 
-const ShopPageTemplate = ({ title, content, contentComponent, subdescription, description, langKey }) => {
+const ShopPageTemplate = ({ title, content, contentComponent, display,
+  array, description, langKey }) => {
   const PageContent = contentComponent || Content;
   return (
     <div>
@@ -23,9 +24,7 @@ const ShopPageTemplate = ({ title, content, contentComponent, subdescription, de
                   <article className="shop">
                     <h3>{title}</h3>
                     <p>{description}</p>
-                    <Book />
-                    <p>{subdescription}</p>
-                    <BookSR />
+                    <Slider array={array} display={display}/>
                     <PageContent className="content" content={content} />
                   </article>
                 </div>
@@ -51,6 +50,9 @@ ShopPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
   tags: PropTypes.array,
   langKey: PropTypes.string,
+  display: PropTypes.shape({
+    array: PropTypes.array,
+  }),
 };
 
 class ShopPage extends React.Component {
@@ -65,6 +67,8 @@ class ShopPage extends React.Component {
     const { frontmatter } = dataMarkdown;
     const image = dataMarkdown.frontmatter.imageCardSL;
     const langKey = dataMarkdown.frontmatter.lang;
+    const { display } = frontmatter.slider;
+    const { array } = frontmatter.slider;
     const tags = frontmatter.tags;
     return (
       <Layout
@@ -81,9 +85,11 @@ class ShopPage extends React.Component {
             title={dataMarkdown.frontmatter.title}
             content={dataMarkdown.html}
             description={frontmatter.description}
-            subdescription={frontmatter.subdescription}
             tags={tags}
             langKey={langKey}
+            heading={dataMarkdown.frontmatter.heading}
+            display={display}
+            array={array}
           />
         </div>
       </Layout>
@@ -124,7 +130,14 @@ export const pageQuery = graphql`
         id
         title
         description
-        subdescription
+        slider {
+          display
+            array {
+              original 
+              originalAlt
+              thumbnail
+            }
+          }
         tags
         lang
         image {

@@ -10,6 +10,6 @@ path: /sr/uspeh/
 slug: /sr/uspeh/
 ---
 
-✨ Hvala! Verujemo da će knjiga da donese svetlo u Vas život! ✨
+✨ Hvala! Verujemo da će knjiga da donese svetlo u Vaš život! ✨
 
 [Preuzmi knjigu ovde](9-koraka.pdf)

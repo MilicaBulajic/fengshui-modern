@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import InputField from "./InputField";
+import { FormattedMessage } from "react-intl";
 
 
 const CustomForm = ({ status, message, onValidated }) => {
@@ -37,7 +38,7 @@ const CustomForm = ({ status, message, onValidated }) => {
         >
             <p>
                 {status === "success" ? "Success!" :
-                    "Download Booklet of services + Free Feng Shui tips for a happy life!"}
+                    <FormattedMessage id="introduction" />}
             </p>
 
             {status === "sending" && (
@@ -80,7 +81,7 @@ const CustomForm = ({ status, message, onValidated }) => {
                 status === 'success' ? null : <button
                     type="submit"
                     formValues={[email, firstName]}
-                >YES, PLEASE!</button>
+                ><FormattedMessage id="button" /></button>
 
             }
         </form>

@@ -21,6 +21,9 @@ $instagram-color: #555555
 .top-header, .main-header, .bottom-header 
     background-color: transparent
 
+.is-vertical-center a 
+  color: #c7a677
+
 a.bookbutton 
   color: #c7a677
   padding-right: 12px
@@ -632,8 +635,20 @@ div.column.is-6
   flex-direction: column
   align-items: center
 
+.image-gallery-thumbnail:hover
+  border: none
 
+.image-gallery-image img
+  object-fit: contain
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+div.image-gallery-image
+  max-height: fit-content
+  
 @media only screen and (max-width: 600px) 
+
+  .image-gallery-thumbnail:hover
+    border: none
 
   .full-width-image-container
     height: 270px

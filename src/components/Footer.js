@@ -35,7 +35,7 @@ const Footer = class extends React.Component {
           >
             <FaInstagram className="instagram-icon" size="2em" />
           </a>
-          <p>© 2021, Feng Shui & Modern design - All rights reserved.</p>
+          <p><FormattedMessage id="rights" /></p>
         </div>
 
         <ScrollToTop />

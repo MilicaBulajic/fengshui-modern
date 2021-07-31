@@ -15,14 +15,14 @@ const Buttons = class extends React.Component {
         <Link
           to={"/" + props.langKey + "/" + menuTree.about[sel] +"/"}
         >
-          About
+          <FormattedMessage id="about" />
         </Link>
         </button>
         <button>
         <Link
           to={"/" + props.langKey + "/" + menuTree.services[sel] +"/"}
         >
-          Services
+          <FormattedMessage id="services" />
         </Link>
       </button>
       </>

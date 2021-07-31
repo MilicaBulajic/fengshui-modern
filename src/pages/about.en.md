@@ -14,7 +14,7 @@ This is our story...
 
 We are Andrew Borg & Tijana Milenkovic.
 
-We started our life journey in the field of architecture.We work as Architects and Interior designers.
+We started our life journey in the field of architecture. We work as Architects and Interior designers.
 We graduated with Master in Architecture, and completed Interior design course. 
 
 

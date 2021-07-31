@@ -14,7 +14,7 @@ const Button = class extends React.Component {
         <Link
           to={"/" + props.langKey + "/" + menuTree.services[sel] +"/"}
         >
-          YES, PLEASE!
+          <FormattedMessage id="button" />
         </Link>
       </button>
     );

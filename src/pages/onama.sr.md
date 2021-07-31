@@ -1,6 +1,6 @@
 ---
 id: '03'
-title: "About us"
+title: "O nama"
 description: "Something about me"
 templateKey: about
 lang: sr
@@ -10,20 +10,19 @@ path: /sr/onama/
 slug: /sr/onama/
 ---
 
-This is our story...
+Ovo je naša priča...
 
-We are Andrew Borg & Tijana Milenkovic.
+Mi smo Andrew Borg i Tijana Milenković.
 
-We started our life journey in the field of architecture.We work as Architects and Interior designers.
-We graduated with Master in Architecture, and completed Interior design course. 
+Započeli smo svoj životni put u polju arhitekture. Mi radimo kao arhitekte i dizajneri enterijera. Diplomirali smo sa Masterom iz arhitekture i završili kurs za dizajn enterijera.
 
 
-Tijana discovered about Feng Shui and started education from the great Masters in that field. She completed <b> Master training at International Feng Shui School</b>, and <b>Master Practitioner Course with Lillian Too.</b>
+Tijana se upoznala sa znanjem o Feng Shui-u i započela svoje obrazovanje od velikih Mastera u toj oblasti. Završila je<b> Master obuku u Međunarodnoj školi za Feng Shui i Master obuku sa Lillian Too.</b>
 
-We started using Feng Shui in life of people close to us, and we were amazed at how this ancient art works. We saw people change their finances, their job, relationships, found love partners, their health improved...
+Mi smo počeli tako što smo koristili Feng Shui u životima nama bliskih ljudi i bili smo zapanjeni kako ova drevna umetnost deluje. Videli smo kako ljudi menjaju svoje finansije, posao, veze, pronalaze ljubavne partnere, poboljšavaju zdravlje...
 
-We decided to use our knowledge in architecture and design, to help people live wonderful lives and make their homes a sacred space where they love and want to be.
+Mi smo odlučili da iskoristimo svoje znanje iz arhitekture i dizajna, da pomognemo ljudima da žive divan život i naprave svoj dom svetim mestom u kojem vole i žele da budu.
 
-We decided with Feng Shui to help people live in joy, happiness, health, love, abundance, in the fullness of life.
+Odlučili smo da sa Feng Shui-em pomognemo ljudima da žive u radosti, sreći, zdravlju, ljubavi, obilju, u punoći života.
 
-We are happy to be here for you!    
+Mi smo srećni što smo tu za vas!

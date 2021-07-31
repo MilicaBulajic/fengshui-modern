@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ImageGallery from 'react-image-gallery';
-import "react-image-gallery/styles/css/image-gallery.css";
+import "./image-gallery.css";
 
 function renderImage(item) {
 
@@ -52,7 +52,7 @@ const Slider = ( { array, display } ) => {
   return (
     <section className="section">
         { display === 'slide'  ?
-     <ImageGallery lazyLoad={true} showBullets={true} renderItem={renderImage} items={array} />
+     <ImageGallery showPlayButton={false} showNav={false} showFullscreenButton={false} showBullets={false} renderItem={renderImage} items={array} />
     :
      <div className='void'></div>
  }
