@@ -6,7 +6,7 @@ const languages = require('./src/data/languages');
 
 module.exports = {
   flags: {
-    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    PRESERVE_WEBPACK_CACHE: true,
     DEV_WEBPACK_CACHE: true
   },
   siteMetadata: {
